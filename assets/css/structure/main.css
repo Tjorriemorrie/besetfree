@@ -1,7 +1,9 @@
 html,
-body,
-.ng-scope {
+body {
   width: 100%;
+  height: 100%;
+}
+.full-height {
   height: 100%;
 }
 .pull-right {
@@ -20,6 +22,7 @@ body,
   align-items: stretch;
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 .flex-parent .flex-column {
   flex-flow: column nowrap;

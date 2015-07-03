@@ -5,7 +5,7 @@ app.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '/assets/templates/home.html'
+                templateUrl: '/assets/templates/onepage.html'
 //                controller: 'BookController',
 //                resolve: {
 //                    // I will cause a 1 second delay
@@ -16,18 +16,18 @@ app.config(['$routeProvider', '$locationProvider',
 //                    }
 //                }
             })
-            .when('/services', {
-                templateUrl: '/assets/templates/services.html'
-            })
-            .when('/hypnotherapy', {
-                templateUrl: '/assets/templates/hypnotherapy.html'
-            })
-            .when('/affiliations/and/accreditations', {
-                templateUrl: '/assets/templates/affiliations_and_accreditations.html'
-            })
-            .when('/contact', {
-                templateUrl: '/assets/templates/contact.html'
-            })
+//            .when('/services', {
+//                templateUrl: '/assets/templates/services.html'
+//            })
+//            .when('/hypnotherapy', {
+//                templateUrl: '/assets/templates/hypnotherapy.html'
+//            })
+//            .when('/affiliations/and/accreditations', {
+//                templateUrl: '/assets/templates/affiliations_and_accreditations.html'
+//            })
+//            .when('/contact', {
+//                templateUrl: '/assets/templates/contact.html'
+//            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -41,10 +41,12 @@ app.config(['$routeProvider', '$locationProvider',
 app.controller('mainCtrl', ['$scope', '$http', '$timeout',
     function ($scope, $http, $timeout) {
         $scope.submit = function (form) {
+            console.log('submitting form...');
 
             // If form is invalid, return and let AngularJS show validation errors.
             if (form.$invalid) {
                 $scope.feedback = 'Form is invalid. Please complete all fields.';
+                console.log('form is invalid');
                 return;
             }
 
