@@ -46,36 +46,46 @@ app.controller('mainCtrl', ['$scope', '$http', '$timeout',
             // If form is invalid, return and let AngularJS show validation errors.
             if (form.$invalid) {
                 $scope.feedback = 'Form is invalid. Please complete all fields.';
-                console.log('form is invalid');
+//                console.log('form is invalid');
                 return;
             }
 
             $scope.submitted = true;
+            $scope.feedback = 'Sending message...';
 
             // Default values for the request.
-            var params = {
+            var params = $.param({
                 'name': $scope.name,
                 'email': $scope.email,
                 'number': $scope.number,
-                'message': $scope.message
-            };
+                'message': $scope.message,
+                'assist': $scope.assist
+            });
             console.log('params', params);
 
-            $http.post('/contact/message', params)
+            var config = {
+                "headers": {'Content-Type': 'application/x-www-form-urlencoded'}
+            };
+            console.log('config', config);
+
+            $http.post('/message', params, config)
                 .success(function (data, status, headers, config) {
-                    if (data.status == 'OK') {
+//                    console.log(data);
+//                    console.log(status);
+                    if (status == 200) {
+                        $scope.feedback = 'Your form has been sent!';
                         $scope.name = null;
                         $scope.number = null;
                         $scope.email = null;
                         $scope.message = null;
                         $scope.assist = null;
 
-                        $scope.feedback = 'Your form has been sent!';
                     } else {
                         $scope.feedback = 'Oops, we received your request, but there was an error processing it.';
                     }
                 })
                 .error(function (data, status, headers, config) {
+//                    console.log(data)
                     $scope.feedback = 'There was a network error. Try again later.';
                 })
                 .finally(function () {

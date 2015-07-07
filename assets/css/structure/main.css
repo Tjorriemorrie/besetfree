@@ -17,7 +17,7 @@ body {
 *********************************************************/
 .flex-parent {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
@@ -45,11 +45,20 @@ body {
   background: rgba(0, 0, 0, 0.15);
   margin: 2em;
 }
+/*******/
+/* NAV */
+/*******/
 .nav {
+  background: linear-gradient(rgba(95, 165, 135, 0), rgba(133, 214, 195, 0.9)), url('/assets/img/nav.jpg');
+  background-repeat: no-repeat;
+  background-attachment: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/img/nav.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=@bg-nav, sizingMethod='scale')";
   text-align: center;
   width: 20%;
   max-width: 20%;
   min-width: 20%;
+  height: 100%;
 }
 .nav .logo {
   width: 100px;
@@ -62,10 +71,10 @@ body {
   font-variant: small-caps;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
-.content {
-  flex-grow: 4;
-  align-items: stretch;
-  height: 100%;
+.content-holder {
+  width: 80%;
+  min-width: 80%;
+  max-width: 80%;
 }
 .hide {
   display: none;
@@ -86,6 +95,11 @@ body {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.6em;
 }
+@media (min-device-width: 769px) {
+  .contact .flex-parent {
+    flex-flow: row nowrap;
+  }
+}
 .contact-main {
   flex-grow: 2;
   padding: 1em;
@@ -105,6 +119,7 @@ body {
   font-size: 0.8em;
   line-height: 1.2em;
 }
-.contact-aside input {
+.contact-aside input,
+.contact-aside textarea {
   color: black;
 }

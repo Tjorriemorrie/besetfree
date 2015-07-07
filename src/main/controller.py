@@ -4,6 +4,7 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from src.settings import JINJA_ENVIRONMENT
 from google.appengine.api import mail
+import time
 import json
 
 
@@ -20,20 +21,23 @@ class MessagePage(BaseHandler):
         log.info('contact page requested')
 
         body = '''
-            From: {}
-            Email: {}
-            Number: {}
-            Message: {}
+From: {}
+Email: {}
+Number: {}
+Message: {}
+Assist: {}
         '''.format(
             self.request.get('name', default_value='unknown'),
             self.request.get('email', default_value='unknown'),
             self.request.get('number', default_value='unknown'),
             self.request.get('message', default_value='unknown'),
+            self.request.get('assist', default_value='unknown'),
         ).strip()
 
-        mail.send_mail_to_admins(
+        mail.send_mail(
             sender="jacoj82@gmail.com",
-            subject="BeSetFree.co.za website message",
+            to="jacoj82@gmail.com,nennakind@gmail.com",
+            subject="BeSetFree.co.za website message ({})".format(time.time()),
             body=body,
         )
 

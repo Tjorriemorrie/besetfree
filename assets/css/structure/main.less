@@ -1,3 +1,5 @@
+@bg-nav: '/assets/img/nav.jpg';
+
 html, body {
   width: 100%;
   height: 100%;
@@ -20,7 +22,7 @@ html, body {
 *********************************************************/
 .flex-parent {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
@@ -54,11 +56,22 @@ html, body {
   margin: 2em;
 }
 
+
+/*******/
+/* NAV */
+/*******/
 .nav {
+  background: linear-gradient(rgba(95, 165, 135, 0), rgba(133, 214, 195, 0.9)), url(@bg-nav);
+  background-repeat: no-repeat;
+  background-attachment: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=@bg-nav, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=@bg-nav, sizingMethod='scale')";
+
   text-align: center;
   width: 20%;
   max-width: 20%;
   min-width: 20%;
+  height: 100%;
 
   .logo {
     width: 100px;
@@ -74,10 +87,11 @@ html, body {
   }
 }
 
-.content {
-  flex-grow: 4;
-  align-items: stretch;
-  height: 100%;
+
+.content-holder {
+  width: 80%;
+  min-width: 80%;
+  max-width: 80%;
 }
 
 .hide {
@@ -102,6 +116,12 @@ html, body {
 .contact {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.6em;
+
+  @media (min-device-width: 769px) {
+    .flex-parent {
+      flex-flow: row nowrap;
+    }
+  }
 }
 
 .contact-main {
@@ -124,7 +144,7 @@ html, body {
   padding: 0 1em;
   font-size: 0.8em;
   line-height: 1.2em;
-  input {
+  input, textarea {
     color: black;
   }
 }
