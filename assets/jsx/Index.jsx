@@ -5,8 +5,10 @@ import {
     Router, Route, IndexRoute
 } from 'react-router';
 import App from './App.jsx';
-import Welcome from './Welcome.jsx';
+import Home from './Home.jsx';
 import Services from './Services.jsx';
+import Therapies from './Therapies.jsx';
+import Courses from './Courses.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
 
@@ -14,9 +16,11 @@ import Contact from './Contact.jsx';
 let routes = (
     <Router>
         <Route path="/" component={App}>
-            <IndexRoute component={Welcome}/>
-            <Route path="services" component={Services}/>
+            <IndexRoute component={Home}/>
             <Route path="about" component={About}/>
+            <Route path="services" component={Services}/>
+            <Route path="therapies" component={Therapies}/>
+            <Route path="courses" component={Courses}/>
             <Route path="contact" component={Contact}/>
         </Route>
     </Router>

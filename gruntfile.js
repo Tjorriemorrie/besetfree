@@ -11,8 +11,9 @@ module.exports = function (grunt) {
             vendor: {
                 files: {
                     './gae/src/static/css/vendor.min.css': [
-                        './bower_components/bootstrap/dist/css/bootstrap.css',
-                        './bower_components/bootstrap/dist/css/bootstrap-theme.css',
+                        //'./bower_components/bootstrap/dist/css/bootstrap.css',
+                        //'./bower_components/bootstrap/dist/css/bootstrap-theme.css',
+                        './bower_components/normalize-css/normalize.css'
                     ]
                 }
             },
