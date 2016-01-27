@@ -1,13 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router';
-import Radium from 'radium';
-import {} from 'react-bootstrap';
-import ss from './Styles.jsx';
+import React from 'react';import ReactDOM from 'react-dom';
 import Sidebar from './Sidebar.jsx';
 
 
-class App extends React.Component {
+export default class App extends React.Component {
 
     render() {
         console.info('[App] render');
@@ -17,6 +12,3 @@ class App extends React.Component {
         </div>;
     }
 }
-
-
-export default Radium(App);
