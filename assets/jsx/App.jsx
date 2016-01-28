@@ -1,5 +1,7 @@
 import React from 'react';import ReactDOM from 'react-dom';
 import Sidebar from './Sidebar.jsx';
+require("normalize-css");
+require("./../less/main.less");
 
 
 export default class App extends React.Component {
