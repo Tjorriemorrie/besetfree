@@ -2,23 +2,17 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    // Require the webpack and react-hot-loader plugins
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-    ],
-    entry: {
-        app: [
-            //'webpack/hot/dev-server',
-            //'webpack-dev-server/client?http://localhost:8989/static',
-            path.resolve(__dirname, 'assets/jsx/Index.jsx')
-        ]
-    },
+    entry: path.resolve(__dirname, 'assets/jsx/Index.jsx'),
     output: {
         path: path.resolve(__dirname, 'gae/src/static/build'),
         publicPath: 'http://localhost:8989/static/build',
         filename: 'besetfree.js'
     },
+    // Require the webpack and react-hot-loader plugins
+    plugins: [
+        //    new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+    ],
     module: {
         loaders: [
             {
@@ -29,10 +23,6 @@ module.exports = {
                     presets: ['react', 'es2015']
                 }
             }
-            //{
-            //    test: /\.jsx?$/,
-            //    loaders: ['react-hot', 'jsx-loader']
-            //}
         ]
     }
 };
