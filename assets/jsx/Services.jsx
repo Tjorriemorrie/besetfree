@@ -1,14 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Radium from 'radium';
-import {} from 'react-bootstrap';
-import ss from './Styles.jsx';
 
 
-class Services extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+export default class Services extends React.Component {
 
     render() {
         console.info('[Services] render');
@@ -31,6 +24,3 @@ class Services extends React.Component {
         </div>;
     }
 }
-
-
-export default Radium(Services);

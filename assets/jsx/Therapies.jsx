@@ -1,14 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Radium from 'radium';
-import {} from 'react-bootstrap';
-import ss from './Styles.jsx';
 
 
-class Therapies extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+export default class Therapies extends React.Component {
 
     render() {
         console.info('[Therapies] render');
@@ -30,6 +23,3 @@ class Therapies extends React.Component {
         </div>;
     }
 }
-
-
-export default Radium(Therapies);
