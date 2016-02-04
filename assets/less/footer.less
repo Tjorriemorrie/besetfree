@@ -1,0 +1,43 @@
+@import 'base';
+
+
+/** footer **/
+
+footer {
+  font-family: "open sans";
+  font-size: 0.861em;
+  padding: 2em 0;
+  text-align: center;
+  color: @white;
+  background: url('/static/img/wood.jpg') no-repeat fixed center center;
+  background-size: cover;
+
+  .boxes {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    & > div {
+      flex: 1 1 auto;
+
+      a {
+        color: @white;
+        //text-decoration: none;
+
+        &:hover {
+          //text-decoration: underline;
+        }
+      }
+    }
+
+    & > div:nth-child(2) {
+      border: 1px solid @white;
+      border-width: 0 1px 0 1px;
+    }
+
+    .copy {
+      padding: 2em 0;
+    }
+  }
+}
