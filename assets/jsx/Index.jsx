@@ -6,6 +6,8 @@ import App from './App.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Services from './Services.jsx';
+import Consulting from './Consulting.jsx';
+import Training from './Training.jsx';
 import Therapies from './Therapies.jsx';
 import Courses from './Courses.jsx';
 import Contact from './Contact.jsx';
@@ -16,7 +18,11 @@ let routes = (
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
             <Route path="/about" component={About}/>
-            <Route path="/services" component={Services}/>
+            <Route path="/services" component={Services}>
+                <IndexRoute component={Consulting}/>
+                <Route path="consulting" component={Consulting}/>
+                <Route path="workshops/and/training" component={Training}/>
+            </Route>
             <Route path="/therapies" component={Therapies}/>
             <Route path="/events/and/workshops" component={Courses}/>
             <Route path="/contact" component={Contact}/>

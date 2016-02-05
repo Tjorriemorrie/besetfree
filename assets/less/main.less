@@ -2,7 +2,7 @@
 @import 'nav';
 @import 'footer';
 @import 'about';
-
+@import 'services';
 
 /** home **/
 
@@ -52,7 +52,7 @@
       flex: 4 3 auto;
       background: @verylightgray;
       padding: 2em 6em;
-      
+
       a {
         color: @lightgreen;
         text-decoration: none;
@@ -60,7 +60,6 @@
     }
   }
 }
-
 
 .flex-parent {
   display: flex;
@@ -102,4 +101,29 @@
   margin-left: 1em;
   padding-left: 2em;
   border-left: 1px solid #aaa;
+}
+
+.banner {
+  background: url('/static/img/wood.jpg') no-repeat fixed center center;
+  background-size: cover;
+  text-align: center;
+  font-style: italic;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    img {
+      width: 4em;
+      height: auto;
+      flex-basis: 8em;
+      padding: 0 1em;
+    }
+    h1 {
+      color: @white;
+      padding: 0 1em;
+      font-family: "georgia", "palatino";
+      font-size: 3em;
+    }
+  }
 }

@@ -1,0 +1,78 @@
+@import 'variables';
+
+
+/** services **/
+
+.services {
+
+  .nav_services {
+    margin: 2em 0;
+    font-family: "open sans";
+    font-size: 0.888rem;
+    text-align: center;
+    a {
+      padding: 0 2em;
+      color: black;
+      text-decoration: none;
+      &.active {
+        color: @green;
+      }
+      &:hover {
+        color: @lightgreen;
+      }
+    }
+  }
+
+}
+
+.services_grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  .service_box {
+    flex: 0 0 18em;
+    margin: 0 0.8em 2em;
+    text-align: center;
+    background: @verylightgray;
+    .bg {
+      width: auto;
+      height: 10em;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .text {
+      padding: 1em 1.8em;
+    }
+    .title {
+      font-family: "droid-serif";
+      font-size: 1.322rem;
+      padding: 0.2em 1em 0.4em;
+      color: black;
+    }
+    .details {
+      font-family: "open sans";
+      font-size: 0.9rem;
+      color: @darkgray;
+      padding: 0 0 0.67em;
+      span {
+        padding: 0 0.2em;
+      }
+    }
+    .description {
+      font-family: "open sans";
+      font-size: 0.8rem;
+      color: @darkgray;
+      line-height: 1.4em;
+    }
+    .show_toggle {
+      font-size: 0.8em;
+      color: @green;
+      &:hover {
+        color: @lightgreen;
+        cursor: pointer;
+      }
+    }
+  }
+}

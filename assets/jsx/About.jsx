@@ -11,9 +11,7 @@ export default class About extends React.Component {
 
                 <div className="wrapper">
                     <img src="/static/img/logo.png"/>
-                    <h1>
-                        About Nerine
-                    </h1>
+                    <h1>About Nerine</h1>
                 </div>
             </div>
 
