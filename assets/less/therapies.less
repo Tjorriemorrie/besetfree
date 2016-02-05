@@ -1,0 +1,60 @@
+@import 'variables';
+
+
+.therapies {
+  .wrapper {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+
+    dl {
+      flex: 4 1 auto;
+      background: @lightgreen;
+      color: white;
+      padding: 0 0 4em;
+      margin: 0;
+      dt {
+        font-family: "droid-serif";
+        font-size: 1.222em;
+        font-weight: bold;
+        padding: 2em 0.6em;
+        font-style: italic;
+      }
+      dd {
+        font-family: "open sans";
+        font-size: 0.833em;
+        padding: 0.2em;
+      }
+    }
+
+    img, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    p:first-child {
+      flex: 0 1 35em;
+    }
+
+    p:last-child {
+      align-self: stretch;
+      flex: 0 1 20em;
+    }
+
+    .testimonies {
+      flex: 0 1 20em;
+      background: @lightbrown;
+      h3 {
+        color: white;
+        font-style: italic;
+        padding: 2em 0;
+      }
+      blockquote {
+        font-size: 2em;
+        line-height: 1.4em;
+        color: black;
+      }
+    }
+  }
+}
