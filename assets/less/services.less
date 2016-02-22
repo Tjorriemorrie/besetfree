@@ -6,19 +6,28 @@
 .services {
 
   .nav_services {
-    margin: 2em 0;
+    margin: 1em 0 3em;
     font-family: "open sans";
-    font-size: 0.888rem;
+    font-size: 1.2rem;
     text-align: center;
+    small {
+      font-size: 0.8em;
+      font-style: italic;
+    }
     a {
-      padding: 0 2em;
-      color: black;
+      color: @darkgray;
+      padding: 0.3em 0.5em;
       text-decoration: none;
       &.active {
-        color: @green;
+        background: @yellow;
+        color: black;
       }
       &:hover {
-        color: @lightgreen;
+        &:before {
+          padding-right: 0.2em;
+          content: "»";
+        }
+        color: black;
       }
     }
   }

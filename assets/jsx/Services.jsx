@@ -17,9 +17,10 @@ export default class Services extends React.Component {
 
             <div className="nav_services">
                 <div className="wrapper">
+                    <p><small>BeSetFree offer consulting and health education and training services:</small></p>
                     <p>
-                        <Link to="/services/consulting" activeClassName="active">Consulting</Link>|
-                        <Link to="/services/workshops/and/training" activeClassName="active">Workshops and Training</Link>
+                        <Link to="/services/consulting" activeClassName="active">Consultation</Link>|
+                        <Link to="/services/workshops/and/training" activeClassName="active">Health Education and Training</Link>
                     </p>
                 </div>
             </div>

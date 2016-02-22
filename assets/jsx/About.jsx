@@ -18,7 +18,7 @@ export default class About extends React.Component {
             <div className="details">
                 <div className="wrapper">
                     <div className="viz">
-                        <img src="/static/img/nerine_about.jpg"/>
+                        <img src="/static/img/nerine_about_optimized.jpg"/>
                         <dl>
                             <dt>Specialties</dt>
                             <dd>Digestive wellness</dd>

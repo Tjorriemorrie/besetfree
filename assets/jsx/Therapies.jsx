@@ -17,7 +17,7 @@ export default class Therapies extends React.Component {
             <div className="therapies">
                 <div className="wrapper">
                     <p>
-                        <img src="/static/img/the_eyes.jpg"/>
+                        <img className="eyes" src="/static/img/the_eyes.jpg"/>
                     </p>
                     <dl>
                         <dt>Therapies</dt>

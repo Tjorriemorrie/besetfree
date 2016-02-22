@@ -15,14 +15,14 @@ export default class ServiceBox extends React.Component {
         }
         else {
             bg = <div className="bg" style={{backgroundImage: 'url(' + info.img + ')'}}></div>;
-            desc = info.description.replace(/(([^\s]+\s\s*){8})(.*)/, '$1…');
+            desc = info.description.replace(/(([^\s]+\s\s*){7})(.*)/, '$1…');
             expand = <span className="show_toggle" onClick={() => toggle(i)}>show more</span>;
         }
         return <div className="service_box">
             {bg}
             <div className="text">
                 <div className="title">{info.title}</div>
-                <div className="details">{info.duration} <span>|</span> {info.price}</div>
+                <div className="details">{info.duration} { (info.price) ? <span>|</span> : ''} {info.price}</div>
                 <div className="description">{desc} {expand}</div>
             </div>
         </div>;
