@@ -15,9 +15,14 @@ def index(path):
 def contact_email():
 	app.logger.info('Contact email: {}'.format(request.form))
 	mail.send_mail_to_admins(
-		sender='{} <{}>'.format(request.form.get('name', 'Unknown'), request.form.get('email', 'unknown@example.com')),
+		sender='{}'.format('jacoj82@gmail.com'),
 		subject='Enquiry',
-		body='{}'.format(request.form.get('enquiry', 'enquiry empty')),
+		body='{}\n\nName: {}\nNumber: {}\nEmail: {}'.format(
+			request.form.get('enquiry', 'enquiry empty'),
+			request.form.get('name', 'noname'),
+			request.form.get('number', 'nonumber'),
+			request.form.get('email', 'noemail'),
+		),
 	)
 
 	return

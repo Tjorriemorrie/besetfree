@@ -14,12 +14,18 @@ export default class Contact extends React.Component {
             email: '',
             enquiry: '',
             status: '',
-            disabled: true
+            disabled: false
         }
     }
 
     render() {
         console.info('[Contact] render');
+
+        let inputprops = {required: true};
+        if (this.state.disabled) {
+            inputprops['disabled'] = true;
+        }
+
         return <div className="contact">
 
             <div className="banner">
@@ -39,14 +45,13 @@ export default class Contact extends React.Component {
                             be in touch. You can contact me via phone, email or by filling out the form below.</p>
                         <p>I’ll get back to you as soon as possible.</p>
                         <p>Tel: 0619142177</p>
-                        <p>info@NaturalHealing.com</p>
+                        <p><a href="mailto:info@besetfree.co.za?subject=Enquiry">info@besetfree.co.za</a></p>
                         <p>Practice at Centurion and Fourways</p>
                         <p>Please inquire about availability</p>
                     </div>
 
                     <div className="contact_form">
                         <h4>Contact form</h4>
-                        {this.renderStatus()}
                         <form ref="contact_form" onSubmit={(e) => this.submitForm(e)}>
                             <dl>
                                 <dt><label>Name:</label></dt>
@@ -54,41 +59,43 @@ export default class Contact extends React.Component {
                                     name="name"
                                     type="text"
                                     value={this.state.name}
-                                    required
-                                    disabled={this.state.disabled}/>
+                                    onChange={(e) => this.setState({name: e.target.value})}
+                                    {...inputprops} />
                                 </dd>
                                 <dt><label>Contact number:</label></dt>
                                 <dd><input
                                     name="number"
                                     type="text"
                                     value={this.state.number}
-                                    required
-                                    disabled={this.state.disabled}/>
+                                    onChange={(e) => this.setState({number: e.target.value})}
+                                    {...inputprops} />
                                 </dd>
                                 <dt><label>Email:</label></dt>
                                 <dd><input
                                     name="email"
                                     type="email"
                                     value={this.state.email}
-                                    required
-                                    disabled={this.state.disabled}/>
+                                    onChange={(e) => this.setState({email: e.target.value})}
+                                    {...inputprops} />
                                 </dd>
                                 <dt><label>Enquiry:</label></dt>
                                 <dd><textarea
                                     name="enquiry"
                                     value={this.state.enquiry}
-                                    required
-                                    disabled={this.state.disabled}/>
+                                    {...inputprops}
+                                    onChange={(e) => this.setState({enquiry: e.target.value})}
+                                    />
                                 </dd>
                                 <dd>
                                     <button className="btn-submit"
                                             type="submit"
-                                            disabled={this.state.disabled}>
+                                            {...inputprops} >
                                         Submit
                                     </button>
                                 </dd>
                             </dl>
                         </form>
+                        {this.renderStatus()}
                     </div>
 
                     <img src="/static/img/contact.jpg"/>

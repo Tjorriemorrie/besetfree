@@ -5,6 +5,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'assets/jsx/Index.jsx'),
     output: {
         path: path.resolve(__dirname, 'gae/src/static/build'),
+        publicPath: 'http://localhost:9898/static/build',
         filename: 'besetfree.js'
     },
     module: {

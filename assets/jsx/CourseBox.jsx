@@ -11,7 +11,6 @@ export default class CourseBox extends React.Component {
             <h3 className="title">{course.title}</h3>
             <h4 className="subtitle">{course.subtitle}</h4>
             <p>{course.name}</p>
-            <p>{course.date}</p>
             <p>{course.time}</p>
             <p>{course.venue}</p>
             <p>{course.cost}</p>

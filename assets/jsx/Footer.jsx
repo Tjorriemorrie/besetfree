@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
                     <div>
                         <h3>Nerine Jansen</h3>
                         <p>Natural healing practitioner</p>
-                        <p>PRO 08206</p>
+                        <p>PRO 08329 T</p>
                     </div>
                     <div>
                         <p>For weekly information on

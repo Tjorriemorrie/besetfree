@@ -10,7 +10,10 @@ export default class Navigation extends React.Component {
             <div className="wrapper">
                 <div className="brand">
                     <h4 className="title">Nerine Jansen</h4>
-                    <p className="subtitle">Natural Healthcare Practitioner</p>
+                    <p className="subtitle">
+                        Natural Healthcare Practitioner
+                        <br/><small>PRO 08329 T</small>
+                    </p>
                 </div>
                 <div className="links">
                     <div><IndexLink activeClassName="active" to="/">Home</IndexLink></div>

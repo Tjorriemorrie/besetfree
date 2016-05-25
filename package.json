@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --port 9898 --devtool eval --progress --colors --content-base gae/src --hot --inline",
-    "build": "webpack -p"
+    "dev": "npm run build && webpack-dev-server --port 9898 --devtool eval --progress --colors --content-base gae/src --hot --inline",
+    "build": "webpack",
+    "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
