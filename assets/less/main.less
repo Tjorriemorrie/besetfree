@@ -1,0 +1,133 @@
+@import 'base';
+@import 'nav';
+@import 'footer';
+@import 'about';
+@import 'services';
+@import 'therapies';
+@import 'courses';
+@import 'contact';
+
+/** home **/
+
+.home {
+  .jumbo {
+    background: url('/static/img/home.jpg') no-repeat fixed center center;
+    background-size: cover;
+
+    .hero {
+      background: rgba(255, 255, 255, 0.75);
+      padding: 8em 4em;
+      font-size: 0.9em;
+      line-height: 2.5em;
+      color: @darkgray;
+      margin-left: 34em;
+      width: 22em;
+
+      .book {
+        font-family: "open sans";
+        text-decoration: none;
+        margin-top: 5em;
+        background: @brown;
+        color: @white;
+        border: 0;
+        padding: 1em;
+
+        &:hover {
+          background: @green;
+        }
+      }
+    }
+  }
+
+  .bio {
+    display: flex;
+    align-items: stretch;
+    .bio_img {
+      flex: 3 4 auto;
+      img {
+        padding: 0;
+        //height: 100%;
+        //width: auto;
+      }
+    }
+    .bio_text {
+      font-size: 0.84em;
+      line-height: 1.4em;
+      flex: 4 3 auto;
+      background: @verylightgray;
+      padding: 2em 6em;
+
+      a {
+        color: @lightgreen;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.flex-parent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  & > div {
+    flex: 1 1 auto;
+  }
+}
+
+.page {
+  & > div {
+    margin: 1em;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 0.25em;
+  }
+}
+
+.heading {
+
+}
+
+.btn-submit {
+  padding: 1em;
+  font-size: 0.9em;
+  border-radius: 0.25em;
+  border: 0;
+  line-height: 0;
+}
+
+.page-contact {
+  background: url('/static/img/bg_contact.jpg') no-repeat fixed 100% center;
+}
+
+.flex-parent .contact-form {
+  flex: 0.5 0 14em;
+  margin-left: 1em;
+  padding-left: 2em;
+  border-left: 1px solid #aaa;
+}
+
+.banner {
+  background: url('/static/img/wood.jpg') no-repeat fixed center center;
+  background-size: cover;
+  text-align: center;
+  font-style: italic;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    img {
+      width: 4em;
+      height: auto;
+      flex-basis: 8em;
+      padding: 0 1em;
+    }
+    h1 {
+      color: @white;
+      padding: 0 1em;
+      font-family: "georgia", "palatino";
+      font-size: 3em;
+    }
+  }
+}
