@@ -11,6 +11,15 @@ import Training from './Training.jsx';
 import Therapies from './Therapies.jsx';
 import Courses from './Courses.jsx';
 import Contact from './Contact.jsx';
+import ga from 'react-ga';
+
+
+ga.initialize('UA-78369933-1', {
+    debug: false,
+});
+function logPageView() {
+    ga.pageview(window.location.pathname);
+}
 
 
 let routes = (
@@ -34,5 +43,5 @@ let history = createBrowserHistory();
 
 const el = document.getElementById('app');
 
-ReactDOM.render(<Router routes={routes} history={history}/>, el);
+ReactDOM.render(<Router routes={routes} history={history} onUpdate={logPageView}/>, el);
 
