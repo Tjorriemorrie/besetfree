@@ -8,7 +8,6 @@ import About from './About.jsx';
 import Services from './Services.jsx';
 import Consulting from './Consulting.jsx';
 import Training from './Training.jsx';
-import Therapies from './Therapies.jsx';
 import Courses from './Courses.jsx';
 import Contact from './Contact.jsx';
 
@@ -23,7 +22,6 @@ let routes = (
                 <Route path="consulting" component={Consulting}/>
                 <Route path="workshops/and/training" component={Training}/>
             </Route>
-            <Route path="/therapies" component={Therapies}/>
             <Route path="/events/and/workshops" component={Courses}/>
             <Route path="/contact" component={Contact}/>
         </Route>
