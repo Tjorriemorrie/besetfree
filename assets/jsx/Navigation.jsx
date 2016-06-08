@@ -19,7 +19,6 @@ export default class Navigation extends React.Component {
                     <div><IndexLink activeClassName="active" to="/">Home</IndexLink></div>
                     <div><Link activeClassName="active" to="/about">About</Link></div>
                     <div><Link activeClassName="active" to="/services">Services</Link></div>
-                    <div><Link activeClassName="active" to="/therapies">Therapies</Link></div>
                     <div><Link activeClassName="active" to="/events/and/workshops">Events and Workshops</Link></div>
                     <div><Link activeClassName="active" to="/contact">Contact</Link></div>
                 </div>
