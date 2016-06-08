@@ -90,7 +90,7 @@ export default class Courses extends React.Component {
 
             <div className="banner">
                 <div className="wrapper">
-                    <img src="/static/img/logo.png"/>
+                    <img src="/static/img/logo_small.png"/>
                     <h1>Events and Workshops</h1>
                 </div>
             </div>
