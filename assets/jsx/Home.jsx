@@ -30,7 +30,7 @@ export default class Home extends React.Component {
 
             <div className="wrapper brand">
                 <div>
-                    <img src="/static/img/logo.png"/>
+                    <img src="/static/img/logo_small.png"/>
                 </div>
                 <div className="brand">
                     <h2>Be Set Free Health Solutions</h2>
