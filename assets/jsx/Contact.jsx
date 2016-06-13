@@ -1,5 +1,6 @@
 import React from 'react';
-import { GoogleMapLoader, GoogleMap, Marker } from "react-google-maps";
+import GoogleMap from 'google-map-react';
+
 
 export default class Contact extends React.Component {
 
@@ -97,6 +98,7 @@ export default class Contact extends React.Component {
                         {this.renderStatus()}
                     </div>
 
+                    <img src="/static/img/contact.jpg"/>
                 </div>
 
                 <div className="right">
@@ -116,45 +118,32 @@ export default class Contact extends React.Component {
 
             </div>
 
-            <div className="wrapper">
-                <div>
-                    <img src="/static/img/contact.jpg"/>
-                </div>
-                <div className="address">
-                    <h4>Address:</h4>
-                    <p>
-                        12 Penguin Dr<br/>Fourways
-                        <br/><br/>
-                        <small>
-                            <a target="_new" href="https://www.google.com/maps/dir/Current+Location/12+Penguin+Dr+Fourways+South+Africa">Get directions on <br/>Google Maps</a>
-                        </small>
-                    </p>
-                </div>
-                <div className="map">
-                    <GoogleMapLoader
-                        containerElement={
-                          <div style={{height: '100%'}} />
-                        }
-                        googleMapElement={
-                            <GoogleMap
-                                ref={(map) => console.log(map)}
-                                defaultZoom={14}
-                                defaultCenter={{ lat: -26.035946, lng: 28.006278 }}
-                            >
-                                <Marker
-                                    position={{
-                                        lat: -26.035946,
-                                        lng: 28.006278,
-                                    }}
-                                    key="Be Set Free"
-                                    defaultAnimation="2"
-                                />
-                            </GoogleMap>
-                        }
-                    />
-                </div>
-            </div>
+        </div>;
 
+        let foo = <div className="page page-contact">
+            <div>
+
+                <h2>Contact</h2>
+
+                <div className="flex-parent">
+
+                    <div>
+                        <p>Please note that all sessions are strictly by appointment only. For enquiries
+                            or bookings please contact using your preferred method.</p>
+                        <p>Nerine practice during business hours from the Conscious Healing Centre,
+                            <br/>12 Penguin Street, Norscot, Fourways (<a
+                                href="https://www.google.co.za/maps/place/12+Penguin+Dr,+Sandton,+2055/@-26.035907,28.006267,17z/data=!3m1!4b1!4m2!3m1!1s0x1e95741cd7c05db9:0xfad86a83f61ffa00?hl=en"
+                                target="_new">Google Maps</a>)
+                            <br/><a href="mailto:info@besetfree.co.za?subject=Enquiry">info@besetfree.co.za</a></p>
+                        <p>After hours sessions and weekends sessions can be arranged
+                            on request at Centurion.</p>
+                        <p><img src="/static/img/healing-centre.jpg"/></p>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>;
     }
 
