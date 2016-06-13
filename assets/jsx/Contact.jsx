@@ -1,5 +1,4 @@
 import React from 'react';
-import GoogleMap from 'google-map-react';
 
 
 export default class Contact extends React.Component {
@@ -131,9 +130,6 @@ export default class Contact extends React.Component {
                         <p>Please note that all sessions are strictly by appointment only. For enquiries
                             or bookings please contact using your preferred method.</p>
                         <p>Nerine practice during business hours from the Conscious Healing Centre,
-                            <br/>12 Penguin Street, Norscot, Fourways (<a
-                                href="https://www.google.co.za/maps/place/12+Penguin+Dr,+Sandton,+2055/@-26.035907,28.006267,17z/data=!3m1!4b1!4m2!3m1!1s0x1e95741cd7c05db9:0xfad86a83f61ffa00?hl=en"
-                                target="_new">Google Maps</a>)
                             <br/><a href="mailto:info@besetfree.co.za?subject=Enquiry">info@besetfree.co.za</a></p>
                         <p>After hours sessions and weekends sessions can be arranged
                             on request at Centurion.</p>
