@@ -26,3 +26,18 @@ def contact_email():
     )
 
     return
+
+
+@app.route('/newsletter/email', methods=['POST'])
+@jsonapi
+def newsletter_email():
+    app.logger.info('Newsletter email: {}'.format(request.form))
+    mail.send_mail_to_admins(
+        sender='{}'.format('jacoj82@gmail.com'),
+        subject='Newsletter signup',
+        body='Email: {}'.format(
+            request.form.get('email', 'noemail'),
+        ),
+    )
+
+    return
