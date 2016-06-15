@@ -34,9 +34,7 @@ export default class Home extends React.Component {
                 </div>
                 <div className="brand">
                     <h2>Be Set Free Health Solutions</h2>
-                    <p>Holistic Healthcare</p>
-                    <p>Wellness Consulting/consultation</p>
-                    <p>Health Education and Training</p>
+                    <p>Holistic Healing Practice focusing on Health Screening, Lifestyle Coaching and Alternative Healing.</p>
                 </div>
             </div>
 
@@ -50,9 +48,10 @@ export default class Home extends React.Component {
                     <img src="/static/img/applesmoothie.jpg"/>
                 </div>
                 <div>
-                    <h3>Individual, Online, Family, Couple and Group Counseling</h3>
-                    <h3>Weight and/or Stress Management</h3>
-                    <h3>Health Education</h3>
+                    <h3>Individual Consultations</h3>
+                    <h3>Workplace Wellness and Workshops</h3>
+                    <h3>Health Awareness Talks</h3>
+                    <p>Areas of Special Interest Include Nutritional Medicine, Herbal Medicine, Stress Management, Irodology, Weight Management and Stop Smoking Programs.</p>
                     <p className="link"><Link to="/services">Read more &rang;</Link></p>
                 </div>
             </div>
