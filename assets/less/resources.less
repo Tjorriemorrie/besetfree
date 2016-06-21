@@ -1,0 +1,104 @@
+@import 'variables';
+
+
+.resource.juicing {
+  background: #ACAEAC;
+  color: #494B4F;
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    font-size: 0.9em;
+    padding: 0.2em 0 0.8em;
+  }
+
+  img {
+    padding: 1em 0;
+  }
+
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1em;
+    .anime-box();
+
+    img {
+      width: 26em;
+    }
+    div:last-child {
+      margin: 0;
+      padding: 0 2em;
+      h2 {
+        font-size: 1.4em;
+      }
+      & > * {
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  .flex-parent {
+    & > div > * {
+      margin: 1em;
+      padding: 0.2em 1em;
+    }
+    & > div > div {
+      .anime-box();
+    }
+  }
+
+
+  .exp-main {
+    font-size: 0.9em;
+  }
+
+  .benefits {
+    background: #FFF3EA;
+    color: #3A2223;
+  }
+
+  .mixing {
+    background: #570F08;
+    color: #DAC0C1;
+  }
+
+  .video {
+    background: #D9B37E;
+    color: #321E13;
+  }
+
+  .tips {
+    background: #E9F2FA;
+    color: #5D2004;
+  }
+
+
+  .exp-side {
+    flex: 1 1.6 auto;
+    font-size: 0.8em;
+  }
+
+  .recipe {
+    background: #FAFAFB;
+    color: #6A8B1B;
+  }
+
+  .fibre {
+    background: #F1FAF7;
+    color: #004B58;
+  }
+
+  .timing {
+    background: #7B3A00;
+    color: #E5C68F;
+  }
+
+  .machine {
+    background: #786057;
+    color: #F2F2F2;
+  }
+
+}

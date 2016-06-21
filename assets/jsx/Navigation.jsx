@@ -20,6 +20,7 @@ export default class Navigation extends React.Component {
                     <div><Link activeClassName="active" to="/about">About</Link></div>
                     <div><Link activeClassName="active" to="/services">Services</Link></div>
                     <div><Link activeClassName="active" to="/events/and/workshops">Events and Workshops</Link></div>
+                    <div><Link activeClassName="active" to="/resources">Resources</Link></div>
                     <div><Link activeClassName="active" to="/contact">Contact</Link></div>
                 </div>
             </div>
