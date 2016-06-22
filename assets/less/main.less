@@ -80,7 +80,7 @@
   position: fixed;
   right: 0.8em;
   bottom: 0;
-  width: 20em;
+  width: 24em;
   padding: 1em 2em;
   color: white;
   font-size: 0.8rem;
@@ -111,11 +111,11 @@
 .keyframes(slide-h; {
   0% {
     opacity: 0;
-    transform: translateX(-3em);
+    transform: translateX(-1em);
   }
   60% {
     opacity: 0.1;
-    transform: translateX(-2em);
+    transform: translateX(-0.4em);
   }
   100% {
     opacity: 1;
@@ -150,13 +150,13 @@
 /** box animations **/
 .anime-box() {
   img, blockquote {
-    .animation(fade-in 3s 1 ease-in);
+    .animation(fade-in 2s 1 ease-in);
   }
   h1, h2, h3, h4, h5, h6, dt {
-    .animation(slide-h 1.4s 1 ease-in);
+    .animation(slide-h 1s 1 ease-in);
   }
   p, li, dl {
-    .animation(slide-p 1.2s 1 ease-in);
+    .animation(slide-p 0.8s 1 ease-in);
   }
 }
 
