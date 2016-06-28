@@ -19,7 +19,7 @@ export default class Home extends React.Component {
 
             <div className="wrapper">
                 <div>
-                    <img src="/static/img/nerine_home_optimized.jpg"/>
+                    <img src="/static/img/home/nerine_opt.jpg"/>
                 </div>
                 <div className="nerine">
                     <h2>Meet Nerine</h2>

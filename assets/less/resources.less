@@ -1,9 +1,10 @@
 @import 'variables';
 
+@main_color: #2D2B33;
 
 .resource.juicing {
-  background: #ACAEAC;
-  color: #494B4F;
+  background: #D1D1DD;
+  color: @main_color;
 
   dt {
     font-weight: bold;
@@ -26,6 +27,7 @@
 
     img {
       width: 26em;
+      //border: 1px solid #AEADBA;
     }
     div:last-child {
       margin: 0;
@@ -56,23 +58,23 @@
   }
 
   .benefits {
-    background: #FFF3EA;
-    color: #3A2223;
+    background: rgba(252, 165, 86, 0.3);
+    color: @main_color;
   }
 
   .mixing {
-    background: #570F08;
-    color: #DAC0C1;
+    background: rgba(64, 5, 18, 0.25);
+    color: @main_color;
   }
 
   .video {
-    background: #D9B37E;
-    color: #321E13;
+    background: rgba(255, 252, 207, 0.4);
+    color: @main_color;
   }
 
   .tips {
-    background: #E9F2FA;
-    color: #5D2004;
+    background: rgba(219, 230, 252, 0.4);
+    color: @main_color;
   }
 
 
@@ -82,8 +84,8 @@
   }
 
   .recipe {
-    background: #FAFAFB;
-    color: #6A8B1B;
+    background: rgba(12, 49, 16, 0.2);
+    color: @main_color;
   }
 
   .fibre {
@@ -92,8 +94,8 @@
   }
 
   .timing {
-    background: #7B3A00;
-    color: #E5C68F;
+    background: rgba(69, 131, 30, 0.1);
+    color: @main_color;
   }
 
   .machine {

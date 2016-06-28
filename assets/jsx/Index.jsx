@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-import {Router, Route, IndexRoute} from 'react-router';
-import { anchorate } from 'anchorate';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {anchorate} from 'anchorate';
 import App from './App.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
@@ -16,7 +15,7 @@ import ga from 'react-ga';
 
 
 ga.initialize('UA-78369933-1', {
-    debug: false,
+    debug: false
 });
 
 
@@ -45,9 +44,8 @@ let routes = (
     </Router>
 );
 
-let history = createBrowserHistory();
-
-const el = document.getElementById('app');
-
-ReactDOM.render(<Router routes={routes} history={history} onUpdate={onUpdate}/>, el);
+ReactDOM.render(
+    <Router routes={routes} history={browserHistory} onUpdate={onUpdate}/>,
+    document.getElementById('app')
+);
 
