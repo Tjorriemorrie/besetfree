@@ -29,7 +29,7 @@ export default class Contact extends React.Component {
 
             <div className="banner">
                 <div className="wrapper">
-                    <img src="/static/img/logo_small.png"/>
+                    <img src="/static/img/logo_small.png" />
                     <h1>Contact</h1>
                 </div>
             </div>
