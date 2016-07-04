@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
 
-export default class About extends React.Component {
+class About extends React.Component {
 
     render() {
         console.info('[About] render');
@@ -65,6 +65,8 @@ export default class About extends React.Component {
                 </div>
             </div>
 
-        </div>;
+        </div>
     }
 }
+
+export default About

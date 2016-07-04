@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-export default class Signup extends React.Component {
+class Signup extends React.Component {
 
     constructor() {
         super();
@@ -98,3 +98,5 @@ export default class Signup extends React.Component {
             .catch(() => this.setState({status: 'error'}));
     }
 }
+
+export default Signup

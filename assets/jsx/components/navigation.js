@@ -1,5 +1,5 @@
-import React from 'react';
-import {IndexLink, Link} from 'react-router';
+import React from 'react'
+import {IndexLink, Link} from 'react-router'
 
 
 const Navigation = ({}) =>
@@ -26,4 +26,5 @@ const Navigation = ({}) =>
         </div>
     </nav>
 
-module.exports = Navigation;
+
+export default Navigation

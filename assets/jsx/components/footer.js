@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
 
     componentDidMount() {
         console.info('[Footer] mounted');
@@ -49,3 +49,5 @@ export default class Footer extends React.Component {
         </footer>;
     }
 }
+
+export default Footer

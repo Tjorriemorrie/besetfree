@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
 
-export default class Home extends React.Component {
+class Home extends React.Component {
 
     render() {
         console.info('[Home] render');
@@ -61,3 +61,5 @@ export default class Home extends React.Component {
     }
 
 }
+
+export default Home
