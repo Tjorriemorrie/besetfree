@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-import {Router, Route, IndexRoute} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import App from './App.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
@@ -37,9 +36,7 @@ let routes = (
     </Router>
 );
 
-let history = createBrowserHistory();
-
 const el = document.getElementById('app');
 
-ReactDOM.render(<Router routes={routes} history={history} onUpdate={logPageView}/>, el);
+ReactDOM.render(<Router routes={routes} history={browserHistory} onUpdate={logPageView}/>, el);
 

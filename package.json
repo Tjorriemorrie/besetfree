@@ -22,13 +22,12 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "file-loader": "^0.8.5",
-    "history": "^1.17.0",
     "normalize-css": "^2.3.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-ga": "^1.4.1",
     "react-pure-render": "^1.0.2",
-    "react-router": "^1.0.0",
+    "react-router": "^2.5.2",
     "url-loader": "^0.5.7"
   },
   "devDependencies": {
