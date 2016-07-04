@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
 
-export default class Services extends React.Component {
+class Services extends React.Component {
 
     render() {
         console.info('[Services] render');
@@ -26,6 +26,9 @@ export default class Services extends React.Component {
             </div>
 
             {React.cloneElement(this.props.children, {})}
-        </div>;
+        </div>
     }
 }
+
+
+export default Services

@@ -19,7 +19,7 @@ class Signup extends React.Component {
             setTimeout(() => {
                 console.info('[Signup] componentDidMount: showing modal');
                 this.setState({'status': 'form'});
-            }, 15000);
+            }, 25000);
         }
         document.onkeydown = evt => {
             evt = evt || window.event;
