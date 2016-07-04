@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import {anchorate} from 'anchorate'
-import App from './components/app'
-import Navigation from './components/navigation'
+import rootRoute from './routes'
+//import App from './components/app'
+//import Navigation from './components/navigation'
 //import About from './About.jsx';
 //import Services from './Services.jsx';
 //import Consulting from './Consulting.jsx';
@@ -44,23 +45,7 @@ function onUpdate() {
 //    </Router>
 //);
 
-const routes = {
-    path: '/',
-    component: App,
-    components: {
-        Navi: Navigation
-    },
-    getIndexRoute(partialNextState, callback) {
-        require.ensure([], function (require) {
-            callback(null, require('./home').default)
-        })
-    },
-    childRoutes: [
-
-    ]
-}
-
 ReactDOM.render(
-    <Router routes={routes} history={browserHistory} onUpdate={onUpdate}/>,
+    <Router routes={rootRoute} history={browserHistory} onUpdate={onUpdate}/>,
     document.getElementById('app')
 )

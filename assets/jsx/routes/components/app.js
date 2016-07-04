@@ -3,7 +3,7 @@ import Navigation from './navigation'
 import Footer from './footer'
 import Signup from './signup'
 require("normalize-css")
-require("./../../less/main.less")
+require("./../../../less/main.less")
 
 
 class App extends React.Component {

@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'assets/jsx/index.jsx'),
+    entry: path.resolve(__dirname, 'assets/jsx/index.js'),
     output: {
         path: path.resolve(__dirname, 'gae/src/static/build/'),
         publicPath: 'http://localhost:9898/static/build/',
