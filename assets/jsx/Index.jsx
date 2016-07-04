@@ -48,4 +48,3 @@ ReactDOM.render(
     <Router routes={routes} history={browserHistory} onUpdate={onUpdate}/>,
     document.getElementById('app')
 );
-
