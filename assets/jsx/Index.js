@@ -30,6 +30,7 @@ function onUpdate() {
 //    <Router>
 //        <Route path="/" component={App}>
 //            <IndexRoute component={Home}/>
+
 //            <Route path="/about" component={About}/>
 //            <Route path="/services" component={Services}>
 //                <IndexRoute component={Consulting}/>
