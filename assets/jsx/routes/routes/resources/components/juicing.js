@@ -1,16 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
 
 
-export default class Juicing extends React.Component {
+class Juicing extends React.Component {
 
     render() {
-        let is_main = this.props.pathname == '/resources';
-        let is_juicing = this.props.pathname == '/resources/juicing';
-        console.info('[Juicing] render', is_main, is_juicing);
+        let is_main = this.props.pathname == '/resources'
+        let is_juicing = this.props.pathname == '/resources/juicing'
+
+        console.info('[Juicing] render', is_main, is_juicing)
 
         if (!is_main && !is_juicing) {
-            return null;
+            return null
         }
 
         return <div className="resource juicing">
@@ -49,14 +50,14 @@ export default class Juicing extends React.Component {
                 </div>
                 {this.renderMore(is_juicing)}
             </div>
-        </div>;
+        </div>
     }
 
     renderMore(is_juicing) {
-        console.info('[Juicing] renderMore');
+        console.info('[Juicing] renderMore')
 
         if (!is_juicing) {
-            return null;
+            return null
         }
 
         return <div>
@@ -230,6 +231,8 @@ export default class Juicing extends React.Component {
             </div>
 
             <p className="collapse"><Link to="/resources#juicing" activeClassName="active"><button>&minus; collapse</button></Link></p>
-        </div>;
+        </div>
     }
 }
+
+export default Juicing
