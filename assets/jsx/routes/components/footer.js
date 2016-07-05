@@ -4,12 +4,10 @@ import React from 'react';
 class Footer extends React.Component {
 
     componentDidMount() {
-        console.info('[Footer] mounted');
         document.addEventListener('fb_init', e => FB.XFBML.parse());
     }
 
     render() {
-        console.info('[Footer] render');
         return <footer>
             <div className="wrapper">
                 <div className="boxes">

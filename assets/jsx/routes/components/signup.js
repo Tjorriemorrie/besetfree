@@ -14,10 +14,8 @@ class Signup extends React.Component {
 
     componentDidMount() {
         let is_done = !!localStorage.getItem('newsletter');
-        console.info('[Signup] componentDidMount: is_done=', is_done);
         if (!is_done) {
             setTimeout(() => {
-                console.info('[Signup] componentDidMount: showing modal');
                 this.setState({'status': 'form'});
             }, 25000);
         }
@@ -36,7 +34,6 @@ class Signup extends React.Component {
     }
 
     render() {
-        console.info('[Signup] render');
         let body = null;
 
         if (this.state.status == 'form') {
@@ -79,7 +76,6 @@ class Signup extends React.Component {
     }
 
     submitForm(e) {
-        console.info('[Signup] submitForm');
         e.preventDefault();
         let fd = new FormData(this.refs.signup_form);
         fetch('/newsletter/email', {
@@ -87,7 +83,6 @@ class Signup extends React.Component {
             body: fd
         })
             .then(res => {
-                console.info(res);
                 if (res.status == 200) {
                     this.setState({status: 'done'});
                     localStorage.setItem('newsletter', 'done');
