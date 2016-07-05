@@ -1,12 +1,12 @@
-import React from 'react';
-import classNames from 'classnames';
-import ServiceBox from './ServiceBox.jsx';
+import React from 'react'
+import classNames from 'classnames'
+import ServiceBox from './serviceBox'
 
 
-export default class Training extends React.Component {
+class Training extends React.Component {
 
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             cons: [
                 {
@@ -58,11 +58,11 @@ export default class Training extends React.Component {
                     expanded: false,
                 },
             ]
-        };
+        }
     }
 
     render() {
-        console.info('[Training] render');
+        console.info('[Training] render')
         return <div className="wrapper">
 
             <div className="services_grid">
@@ -71,13 +71,16 @@ export default class Training extends React.Component {
                 }, this)}
             </div>
 
-        </div>;
+        </div>
     }
 
     toggleExpanded(i) {
-        console.info('[Training] toggleExpanded', i);
-        let { cons } = this.state;
-        cons[i]['expanded'] = !cons[i]['expanded'];
-        this.setState({cons: cons});
+        console.info('[Training] toggleExpanded', i)
+        let { cons } = this.state
+        cons[i]['expanded'] = !cons[i]['expanded']
+        this.setState({cons: cons})
     }
 }
+
+
+export default Training
