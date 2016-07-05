@@ -1,13 +1,25 @@
-import React from 'react'
-import {Route, IndexRoute} from 'react-router'
 import App from './components/app'
 import Home from './routes/home/components/home'
-import AboutRoute from './routes/about'
+import aboutRoute from './routes/about'
+import servicesRoute from './routes/services'
+import coursesRoute from './routes/courses'
+import resourcesRoute from './routes/resources'
+import contactRoute from './routes/contact'
 
 
-const route = <Route path="/" component={App}>
-    <IndexRoute component={Home} />
-    <AboutRoute />
-</Route>
+const route = {
+    path: '/',
+    component: App,
+    indexRoute: {
+        component: Home
+    },
+    childRoutes: [
+        aboutRoute,
+        servicesRoute,
+        coursesRoute,
+        resourcesRoute,
+        contactRoute,
+    ]
+}
 
 export default route
