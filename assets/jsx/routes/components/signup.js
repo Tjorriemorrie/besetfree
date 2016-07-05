@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-export default class Signup extends React.Component {
+class Signup extends React.Component {
 
     constructor() {
         super();
@@ -19,7 +19,7 @@ export default class Signup extends React.Component {
             setTimeout(() => {
                 console.info('[Signup] componentDidMount: showing modal');
                 this.setState({'status': 'form'});
-            }, 15000);
+            }, 25000);
         }
         document.onkeydown = evt => {
             evt = evt || window.event;
@@ -98,3 +98,5 @@ export default class Signup extends React.Component {
             .catch(() => this.setState({status: 'error'}));
     }
 }
+
+export default Signup

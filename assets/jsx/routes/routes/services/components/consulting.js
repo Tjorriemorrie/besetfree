@@ -1,9 +1,9 @@
-import React from 'react';
-import classNames from 'classnames';
-import ServiceBox from './ServiceBox.jsx';
+import React from 'react'
+import classNames from 'classnames'
+import ServiceBox from './serviceBox'
 
 
-export default class Consulting extends React.Component {
+class Consulting extends React.Component {
 
     constructor(props) {
         super(props);
@@ -89,3 +89,6 @@ export default class Consulting extends React.Component {
         this.setState({cons: cons});
     }
 }
+
+
+export default Consulting

@@ -1,8 +1,8 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from 'react'
+import classNames from 'classnames'
 
 
-export default class ServiceBox extends React.Component {
+class ServiceBox extends React.Component {
 
     render() {
         let { info, i, toggle } = this.props;
@@ -25,6 +25,9 @@ export default class ServiceBox extends React.Component {
                 <div className="details">{info.duration} { (info.price) ? <span>|</span> : ''} {info.price}</div>
                 <div className="description">{desc} {expand}</div>
             </div>
-        </div>;
+        </div>
     }
 }
+
+
+export default ServiceBox

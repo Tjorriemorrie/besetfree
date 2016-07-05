@@ -1,8 +1,8 @@
-import React from 'react';
-import CourseBox from './CourseBox.jsx';
+import React from 'react'
+import CourseBox from './courseBox'
 
 
-export default class Courses extends React.Component {
+class Courses extends React.Component {
 
     constructor(props) {
         super(props);
@@ -117,3 +117,5 @@ export default class Courses extends React.Component {
         </div>;
     }
 }
+
+export default Courses

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 
-export default class Contact extends React.Component {
+class Contact extends React.Component {
 
     constructor(props) {
         super(props);
@@ -168,3 +168,5 @@ export default class Contact extends React.Component {
             .catch(() => this.setState({status: 'There was an error sending your enquiry.'}));
     }
 }
+
+export default Contact

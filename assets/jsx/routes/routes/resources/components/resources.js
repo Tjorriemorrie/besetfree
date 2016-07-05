@@ -1,11 +1,11 @@
-import React from 'react';
-import Juicing from './resources/Juicing.jsx';
+import React from 'react'
+import Juicing from './juicing'
 
 
-export default class Resources extends React.Component {
+class Resources extends React.Component {
 
     render() {
-        console.info('[Resources] render', this.props.location.pathname);
+        console.info('[Resources] render', this.props.location.pathname)
 
         return <div className="resources">
             <div className="banner">
@@ -19,6 +19,8 @@ export default class Resources extends React.Component {
                 <Juicing pathname={this.props.location.pathname} />
             </div>
 
-        </div>;
+        </div>
     }
 }
+
+export default Resources

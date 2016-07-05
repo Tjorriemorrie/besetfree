@@ -2,11 +2,12 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'assets/jsx/Index.jsx'),
+    entry: path.resolve(__dirname, 'assets/jsx/index.js'),
     output: {
-        path: path.resolve(__dirname, 'gae/src/static/build'),
-        publicPath: 'http://localhost:9898/static/build',
-        filename: 'besetfree.js'
+        path: path.resolve(__dirname, 'gae/src/static/build/'),
+        publicPath: 'http://localhost:9898/static/build/',
+        filename: '[name].js',
+        chunkFilename: '[id].chunk.js'
     },
     module: {
         loaders: [
@@ -24,5 +25,8 @@ module.exports = {
                 loader: 'style!css'
             }
         ]
-    }
+    },
+    plugins: [
+         new webpack.optimize.CommonsChunkPlugin({name:'commons'})
+    ]
 };

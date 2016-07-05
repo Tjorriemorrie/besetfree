@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build && webpack-dev-server --port 9898 --devtool eval --progress --colors --content-base gae/src --hot --inline",
-    "test": "mocha --compilers js:babel-core/register",
-    "tests": "mocha assets/test --compilers js:babel-core/register",
+    "test": "mocha --require assets/test/bootstrap.js",
+    "tests": "mocha -w --compilers js:babel-core/register assets/test",
     "build": "webpack",
-    "prod": "webpack -p"
+    "prod": "webpack --progress -p --define process.env.NODE_ENV='\"production\"'"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
-    "babel-loader": "^6.2.1",
+    "babel-loader": "^6.2.4",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.3.13",
@@ -50,7 +50,7 @@
     "react-hot-loader": "^1.3.0",
     "react-transform-hmr": "^1.0.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.12",
+    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
 }
