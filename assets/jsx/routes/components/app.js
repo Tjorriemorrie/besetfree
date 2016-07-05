@@ -12,9 +12,10 @@ class App extends React.Component {
         console.info('[App] render');
 
         return <div>
-            <Signup/>
-            <Navigation/>
+            <Signup />
+            <Navigation />
             {this.props.children}
+            <Footer />
         </div>
     }
 }
