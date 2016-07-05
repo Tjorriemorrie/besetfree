@@ -6,7 +6,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'gae/src/static/build/'),
         publicPath: 'http://localhost:9898/static/build/',
-        filename: '[name].js'
+        filename: '[name].js',
+        chunkFilename: '[id].chunk.js'
     },
     module: {
         loaders: [
@@ -24,5 +25,8 @@ module.exports = {
                 loader: 'style!css'
             }
         ]
-    }
+    },
+    plugins: [
+         new webpack.optimize.CommonsChunkPlugin({name:'commons'})
+    ]
 };

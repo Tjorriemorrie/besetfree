@@ -8,7 +8,7 @@
     "test": "mocha --require assets/test/bootstrap.js",
     "tests": "mocha -w --compilers js:babel-core/register assets/test",
     "build": "webpack",
-    "prod": "webpack --progress -p"
+    "prod": "webpack --progress -p --define process.env.NODE_ENV='\"production\"'"
   },
   "repository": {
     "type": "git",
