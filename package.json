@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build && webpack-dev-server --port 9898 --devtool eval --progress --colors --content-base gae/src --hot --inline",
+    "build": "webpack",
+    "dev": "webpack-dev-server --port 9898 --devtool eval --progress --colors --content-base gae/src --hot --inline",
     "test": "mocha --require assets/test/bootstrap.js",
     "tests": "mocha -w --compilers js:babel-core/register assets/test",
-    "build": "webpack",
     "prod": "webpack --progress -p --define process.env.NODE_ENV='\"production\"'"
   },
   "repository": {
