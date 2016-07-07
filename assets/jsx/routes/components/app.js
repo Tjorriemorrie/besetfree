@@ -1,23 +1,24 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import Navigation from './navigation'
 import Footer from './footer'
-import Signup from './signup'
+import SignUp from './../routes/signup/containers/signUp'
 require("normalize-css")
 require("./../../../less/main.less")
 
 
-class App extends React.Component {
-
-    render() {
-        console.info('[App] render');
-
-        return <div>
-            <Signup />
+const App = ({ children }) => {
+    return (
+        <div>
+            <SignUp />
             <Navigation />
-            {this.props.children}
+            {children}
             <Footer />
         </div>
-    }
+    )
+}
+
+App.propTypes = {
+    children: PropTypes.node.isRequired,
 }
 
 export default App
