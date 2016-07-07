@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import {anchorate} from 'anchorate'
 import rootRoute from './routes'
+import { Provider } from 'react-redux'
+import store from './store'
 import ga from 'react-ga'
 
 
@@ -18,6 +20,8 @@ function onUpdate() {
 
 
 ReactDOM.render(
-    <Router routes={rootRoute} history={browserHistory} onUpdate={onUpdate}/>,
+    <Provider store={store}>
+        <Router routes={rootRoute} history={browserHistory} onUpdate={onUpdate}/>
+    </Provider>,
     document.getElementById('app')
 )
