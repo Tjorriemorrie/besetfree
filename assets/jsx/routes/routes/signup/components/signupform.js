@@ -1,42 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { PropTypes } from 'react';
 
 
-class Signup extends React.Component {
+class SignUpForm extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props)
         this.state = {
-            status: 'hidden',
-            email: ''
-        };
+            email: '',
+        }
     }
 
     componentDidMount() {
-        let is_done = !!localStorage.getItem('newsletter');
+        const { hide, open } = this.props
+        let is_done = !!localStorage.getItem('newsletter')
         if (!is_done) {
-            setTimeout(() => {
-                this.setState({'status': 'form'});
-            }, 25000);
+            setTimeout(open, 35000)
         }
         document.onkeydown = evt => {
             evt = evt || window.event;
-            var isEscape = false;
+            var isEscape = false
             if ("key" in evt) {
-                isEscape = evt.key == "Escape";
+                isEscape = evt.key == "Escape"
             } else {
-                isEscape = evt.keyCode == 27;
+                isEscape = evt.keyCode == 27
             }
-            if (isEscape && this.state.status != 'hidden') {
-                this.setState({status: 'hidden'});
+            if (isEscape) {
+                hide()
             }
         };
     }
 
     render() {
         let body = null;
+        const { hide, isForm, isDone, isError } = this.props
 
-        if (this.state.status == 'form') {
+        if (isForm) {
             body = <div className="signup">
                 <h3>Newsletter</h3>
                 <p>Sign up for my newsletter to receive interesting articles!</p>
@@ -50,25 +48,25 @@ class Signup extends React.Component {
                                onChange={(e) => this.setState({email: e.target.value})} />
                         <br/>
                         <button type="submit">Submit</button>
-                        <button onClick={e => {e.preventDefault(); this.setState({status: 'hidden'})}}>Close</button>
+                        <button onClick={e => {e.preventDefault(); hide()}}>Close</button>
                     </p>
                 </form>
             </div>;
         }
 
-        if (this.state.status == 'done') {
+        if (isDone) {
             body = <div className="signup">
                 <h3>Newsletter</h3>
                 <p>Thank you for signing up!</p>
-                <button onClick={() => this.setState({status: 'hidden'})}>Close</button>
+                <button onClick={() => hide()}>Close</button>
             </div>;
         }
 
-        if (this.state.status == 'error') {
+        if (isError) {
             body = <div className="signup">
                 <h3>Newsletter</h3>
                 <p>An error occurred! It will be fixed shortly!</p>
-                <button onClick={() => this.setState({status: 'hidden'})}>Close</button>
+                <button onClick={() => hide()}>Close</button>
             </div>;
         }
 
@@ -76,22 +74,33 @@ class Signup extends React.Component {
     }
 
     submitForm(e) {
-        e.preventDefault();
-        let fd = new FormData(this.refs.signup_form);
+        e.preventDefault()
+        const { finish, fault } = this.props
+        let fd = new FormData(this.refs.signup_form)
         fetch('/newsletter/email', {
             method: 'POST',
             body: fd
         })
             .then(res => {
                 if (res.status == 200) {
-                    this.setState({status: 'done'});
+                    finish()
                     localStorage.setItem('newsletter', 'done');
                 } else {
-                    this.setState({status: 'error'});
+                    fault()
                 }
             })
-            .catch(() => this.setState({status: 'error'}));
+            .catch(() => fault())
     }
 }
 
-export default Signup
+SignUpForm.propTypes = {
+    isForm: PropTypes.bool.isRequired,
+    isDone: PropTypes.bool.isRequired,
+    isError: PropTypes.bool.isRequired,
+    hide: PropTypes.func.isRequired,
+    open: PropTypes.func.isRequired,
+    finish: PropTypes.func.isRequired,
+    fault: PropTypes.func.isRequired
+}
+
+export default SignUpForm
