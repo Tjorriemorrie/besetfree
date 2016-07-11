@@ -1,10 +1,10 @@
-import App from './components/app'
-import Home from './views/home/components/home'
-import aboutRoute from './views/about'
-import servicesRoute from './views/services'
-import coursesRoute from './views/courses'
-import resourcesRoute from './views/resources'
-import contactRoute from './views/contact'
+import App from './base/components/app'
+import Home from './home/components/home'
+import aboutRoute from './about'
+import servicesRoute from './services'
+import coursesRoute from './courses'
+import resourcesRoute from './resources'
+import contactRoute from './contact'
 
 
 const route = {

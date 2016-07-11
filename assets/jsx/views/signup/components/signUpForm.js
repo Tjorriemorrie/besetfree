@@ -38,7 +38,7 @@ class SignUpForm extends React.Component {
             body = <div className="signup">
                 <h3>Newsletter</h3>
                 <p>Sign up for my newsletter to receive interesting articles!</p>
-                <form ref="signup_form" onSubmit={(e) => this.submitForm(e)}>
+                <form ref="signup_form" onSubmit={(e) => this.onSubmit(e)}>
                     <p>
                         <label>Email:</label>
                         <br/>
@@ -73,23 +73,10 @@ class SignUpForm extends React.Component {
         return body;
     }
 
-    submitForm(e) {
+    onSubmit(e) {
         e.preventDefault()
-        const { finish, fault } = this.props
-        let fd = new FormData(this.refs.signup_form)
-        fetch('/newsletter/email', {
-            method: 'POST',
-            body: fd
-        })
-            .then(res => {
-                if (res.status == 200) {
-                    finish()
-                    localStorage.setItem('newsletter', 'done');
-                } else {
-                    fault()
-                }
-            })
-            .catch(() => fault())
+        const { submitForm, finish, fault } = this.props
+        submitForm(this.refs.signup_form, finish, fault)
     }
 }
 

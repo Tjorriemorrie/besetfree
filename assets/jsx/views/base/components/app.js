@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 import Navigation from './navigation'
 import Footer from './footer'
-import SignUp from './../views/signup/containers/signUp'
+import SignUp from './../../signup/containers/signUp'
 require("normalize-css")
-require("./../../../less/main.less")
+require("./../../../../less/main.less")
 
 
 const App = ({ children }) => {

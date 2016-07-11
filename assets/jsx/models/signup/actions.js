@@ -3,7 +3,6 @@
  */
 
 export const SET_SIGNUP_STATUS = 'SET_SIGNUP_STATUS'
-export const SET_SIGNUP_FORM = 'SET_SIGNUP_FORM'
 
 
 export const SIGNUP_STATUSES = {
@@ -18,13 +17,6 @@ export const SIGNUP_STATUSES = {
  */
 
 export const setSignupStatus = (text) => {
-    return {
-        type: SET_SIGNUP_STATUS,
-        status: text,
-    }
-}
-
-export const setSignupForm = (text) => {
     return {
         type: SET_SIGNUP_STATUS,
         status: text,

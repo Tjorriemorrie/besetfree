@@ -1,10 +1,9 @@
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import { reducer as form } from 'redux-form'
 //import * as signup from './signup/reducers'
-import signup from './signup/reducers'
+import * as signup from './signup/reducers'
+import facebook from './facebook/reducers'
 
-
-//console.info('singup', signup)
 
 let middlewares = [];
 
@@ -44,7 +43,8 @@ if (process.env.NODE_ENV === `development`) {
 
 const reducers = {
     form,
-    signup,
+    ...signup,
+    facebook,
 }
 //console.info('reducers', reducers)
 
