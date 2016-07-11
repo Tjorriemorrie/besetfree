@@ -34,7 +34,7 @@ const signup = () => {
         it('showing form', () => {
             props.isForm = true
             wrapper = shallow(<Signup {...props} />)
-            expect(wrapper).to.be.not.blank()
+            expect(wrapper).to.not.be.blank()
             expect(wrapper).to.have.descendants('form')
             expect(wrapper).to.have.descendants('form')
         })

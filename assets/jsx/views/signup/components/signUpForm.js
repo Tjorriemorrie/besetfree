@@ -11,27 +11,28 @@ class SignUpForm extends React.Component {
     }
 
     componentDidMount() {
-        const { hide, open } = this.props
-        let is_done = !!localStorage.getItem('newsletter')
-        if (!is_done) {
+        const { isFinished, hide, open } = this.props
+
+        if (!isFinished) {
             setTimeout(open, 35000)
+
+            document.addEventListener('onkeydown', evt => {
+                evt = evt || window.event;
+                var isEscape = false
+                if ("key" in evt) {
+                    isEscape = evt.key == "Escape"
+                } else {
+                    isEscape = evt.keyCode == 27
+                }
+                if (isEscape) {
+                    hide()
+                }
+            })
         }
-        document.onkeydown = evt => {
-            evt = evt || window.event;
-            var isEscape = false
-            if ("key" in evt) {
-                isEscape = evt.key == "Escape"
-            } else {
-                isEscape = evt.keyCode == 27
-            }
-            if (isEscape) {
-                hide()
-            }
-        };
     }
 
     render() {
-        let body = null;
+        let body = null
         const { hide, isForm, isDone, isError } = this.props
 
         if (isForm) {

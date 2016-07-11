@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import SignUpForm from './../components/signUpForm'
-import { SIGNUP_STATUSES, setSignupStatus } from './../../../models/signup/actions'
+import { SIGNUP_STATUSES, setSignupStatus, sendForm } from './../../../models/signup/actions'
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
         isForm: state.signup_status == SIGNUP_STATUSES.FORM,
         isDone: state.signup_status == SIGNUP_STATUSES.DONE,
         isError: state.signup_status == SIGNUP_STATUSES.ERROR,
+        isFinished: state.signup_status == SIGNUP_STATUSES.FINISHED,
     }
 }
 
@@ -17,22 +18,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         open: () => dispatch(setSignupStatus(SIGNUP_STATUSES.FORM)),
         finish: () => dispatch(setSignupStatus(SIGNUP_STATUSES.DONE)),
         fault: () => dispatch(setSignupStatus(SIGNUP_STATUSES.ERROR)),
-        submitForm2: (form_values, finish, fault) => {
-            console.info('submitform2')
-            fetch('/newsletter/email', {
-                method: 'POST',
-                body: new FormData(form_values)
-            })
-                .then(res => {
-                    if (res.status == 200) {
-                        finish()
-                        localStorage.setItem('newsletter', 'done');
-                    } else {
-                        fault()
-                    }
-                })
-                .catch(() => fault())
-        }
+        submitForm: form_values => dispatch(sendForm(form_values)),
     }
 }
 

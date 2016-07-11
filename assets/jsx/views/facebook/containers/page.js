@@ -5,7 +5,7 @@ import { FB_STATUSES } from './../../../models/facebook/actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        canParse: state.facebook == FB_STATUSES.DONE,
+        canParse: state.facebook_status == FB_STATUSES.DONE,
     }
 }
 

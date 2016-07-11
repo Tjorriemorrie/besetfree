@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { SET_FB_STATUS, FB_STATUSES, setFacebookStatus } from './../../jsx/models/facebook/actions'
-import reducer from './../../jsx/models/facebook/reducers'
+import { facebook_status } from './../../jsx/models/facebook/reducers'
 
 
 const facebook = () => {
@@ -17,10 +17,10 @@ const facebook = () => {
 
         describe('reducers', () => {
             it('has initial state as loading', () => {
-                expect(reducer(undefined, {})).to.equal(FB_STATUSES.LOADING)
+                expect(facebook_status(undefined, {})).to.equal(FB_STATUSES.LOADING)
             })
             it('set status', () => {
-                expect(reducer(undefined, {
+                expect(facebook_status(undefined, {
                     type: SET_FB_STATUS,
                     status: FB_STATUSES.DONE,
                 })).to.equal(FB_STATUSES.DONE)
