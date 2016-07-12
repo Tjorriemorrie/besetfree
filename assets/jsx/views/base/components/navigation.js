@@ -1,8 +1,8 @@
 import React from 'react'
-import {IndexLink, Link} from 'react-router'
+import { IndexLink, Link } from 'react-router'
 
 
-const Navigation = ({}) =>
+const Navigation = () =>
     <nav>
         <div className="wrapper">
 
