@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --port 9898 --devtool eval --progress --colors --content-base gae/src --hot --inline",
+    "dev": "webpack-dev-server --port 9898 --devtool eval --progress -c --content-base gae/src --hot --inline",
     "test": "mocha --compilers js:babel-core/register",
-    "tests": "mocha -w --colors --compilers js:babel-core/register assets/test",
-    "prod": "webpack --progress -p --define process.env.NODE_ENV='\"production\"'"
+    "tests": "mocha -w -c --compilers js:babel-core/register assets/test",
+    "prod": "webpack --progress -p -c --define process.env.NODE_ENV='\"production\"'"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,6 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.5.2",
     "redux": "^3.5.2",
-    "redux-form": "^5.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0"
   },

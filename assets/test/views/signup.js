@@ -16,13 +16,15 @@ const signup = () => {
         let props
         beforeEach(() => {
             props = {
+                form: {email: ''},
                 isForm: false,
                 isDone: false,
                 isError: false,
+                isFinished: false,
                 hide: sinon.spy(),
                 open: sinon.spy(),
-                finish: sinon.spy(),
-                fault: sinon.spy(),
+                setValue: sinon.spy(),
+                submitForm: sinon.spy(),
             }
         })
 
@@ -35,7 +37,6 @@ const signup = () => {
             props.isForm = true
             wrapper = shallow(<Signup {...props} />)
             expect(wrapper).to.not.be.blank()
-            expect(wrapper).to.have.descendants('form')
             expect(wrapper).to.have.descendants('form')
         })
 

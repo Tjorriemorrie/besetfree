@@ -1,7 +1,5 @@
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
-import { reducer as form } from 'redux-form'
-//import * as signup from './signup/reducers'
 import * as signup from './signup/reducers'
 import * as facebook from './facebook/reducers'
 
@@ -43,7 +41,6 @@ if (process.env.NODE_ENV === `development`) {
 }
 
 const reducers = {
-    form,
     ...signup,
     ...facebook,
 }

@@ -3,6 +3,7 @@
  */
 
 export const SET_SIGNUP_STATUS = 'SET_SIGNUP_STATUS'
+export const SET_SIGNUP_FORM = 'SET_SIGNUP_FORM'
 
 
 export const SIGNUP_STATUSES = {
@@ -11,6 +12,10 @@ export const SIGNUP_STATUSES = {
     DONE: 'done',
     ERROR: 'error',
     FINISHED: 'finished',
+}
+
+export const SIGNUP_FIELDS = {
+    EMAIL: 'email',
 }
 
 /**
@@ -24,11 +29,23 @@ export const setSignupStatus = (text) => {
     }
 }
 
-export const sendForm = form_values => {
+export const setSignupForm = (field, value) => {
+    return {
+        type: SET_SIGNUP_FORM,
+        field: field,
+        value: value,
+    }
+}
+
+export const sendForm = () => {
     return (dispatch, getState) => {
+        let fd = new FormData()
+        for (let [key, value] of Object.entries(getState().signup_form)) {
+            fd.append(key, value)
+        }
         return fetch('/newsletter/email', {
             method: 'POST',
-            body: new FormData(form_values)
+            body: fd,
         })
             .then(res => {
                 if (res.status == 200) {

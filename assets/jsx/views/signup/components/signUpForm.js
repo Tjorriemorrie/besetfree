@@ -1,14 +1,7 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 
-class SignUpForm extends React.Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            email: '',
-        }
-    }
+class SignUpForm extends Component {
 
     componentDidMount() {
         const { isFinished, hide, open } = this.props
@@ -33,20 +26,17 @@ class SignUpForm extends React.Component {
 
     render() {
         let body = null
-        const { hide, isForm, isDone, isError } = this.props
+        const { form, isForm, isDone, isError, hide, setValue, submitForm } = this.props
 
         if (isForm) {
             body = <div className="signup">
                 <h3>Newsletter</h3>
                 <p>Sign up for my newsletter to receive interesting articles!</p>
-                <form ref="signup_form" onSubmit={(e) => this.onSubmit(e)}>
+                <form onSubmit={(e) => {e.preventDefault(); submitForm()}}>
                     <p>
                         <label>Email:</label>
                         <br/>
-                        <input type="email" name="email"
-                               required="true"
-                               value={this.state.email}
-                               onChange={(e) => this.setState({email: e.target.value})} />
+                        <input type="email" name="email" required="true" value={form.email} onChange={e => setValue('email', e.target.value)} />
                         <br/>
                         <button type="submit">Submit</button>
                         <button onClick={e => {e.preventDefault(); hide()}}>Close</button>
@@ -74,21 +64,18 @@ class SignUpForm extends React.Component {
         return body;
     }
 
-    onSubmit(e) {
-        e.preventDefault()
-        const { submitForm, finish, fault } = this.props
-        submitForm(this.refs.signup_form, finish, fault)
-    }
 }
 
 SignUpForm.propTypes = {
+    form: PropTypes.object.isRequired,
     isForm: PropTypes.bool.isRequired,
     isDone: PropTypes.bool.isRequired,
     isError: PropTypes.bool.isRequired,
+    isFinished: PropTypes.bool.isRequired,
     hide: PropTypes.func.isRequired,
     open: PropTypes.func.isRequired,
-    finish: PropTypes.func.isRequired,
-    fault: PropTypes.func.isRequired
+    setValue: PropTypes.func.isRequired,
+    submitForm: PropTypes.func.isRequired,
 }
 
 export default SignUpForm
