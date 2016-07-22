@@ -21,6 +21,7 @@ const Navigation = () =>
                 <div><Link activeClassName="active" to="/events/and/workshops">Events and Workshops</Link></div>
                 <div><Link activeClassName="active" to="/resources">Resources</Link></div>
                 <div><Link activeClassName="active" to="/contact">Contact</Link></div>
+                <div><Link activeClassName="active" to="/quantum">Quantum</Link></div>
             </div>
 
         </div>

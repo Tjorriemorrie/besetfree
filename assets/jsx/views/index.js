@@ -5,6 +5,7 @@ import servicesRoute from './services'
 import coursesRoute from './courses'
 import resourcesRoute from './resources'
 import contactRoute from './contact'
+import quantum from './quantum/route'
 
 
 const route = {
@@ -19,6 +20,7 @@ const route = {
         coursesRoute,
         resourcesRoute,
         contactRoute,
+        quantum,
     ]
 }
 

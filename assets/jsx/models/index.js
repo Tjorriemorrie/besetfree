@@ -2,11 +2,12 @@ import { applyMiddleware, createStore, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import * as signup from './signup/reducers'
 import * as facebook from './facebook/reducers'
+import * as quantum from './quantum/reducers'
 
 
 let middlewares = [thunk];
 
-if (process.env.NODE_ENV === `development`) {
+if (process.env.NODE_ENV != 'production') {
     const createLogger = require(`redux-logger`);
     const logger = createLogger({
         level: 'log',
@@ -43,6 +44,7 @@ if (process.env.NODE_ENV === `development`) {
 const reducers = {
     ...signup,
     ...facebook,
+    ...quantum,
 }
 //console.info('reducers', reducers)
 
