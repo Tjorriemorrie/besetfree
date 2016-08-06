@@ -28,6 +28,8 @@ class Quantum:
         for root, dirs, files in os.walk(dir):
             for zip_file in [f for f in files if f.endswith('zip')]:
                 self.parse_zip(os.path.sep.join([root, zip_file]))
+                break
+            break
 
     def parse_zip(self, filename):
         logger.info('Parsing {}'.format(filename))
@@ -38,6 +40,7 @@ class Quantum:
                 logger.info(m.filename)
                 f = z.open(m)
                 self.parse_html(f.read())
+                break
 
     def parse_html(self, contents):
         html = BeautifulSoup(contents, 'html.parser')
@@ -99,6 +102,15 @@ class Quantum:
         test['sections'].append(section)
 
         # logger.info(self.profiles)
+
+        table = tables[6]
+        logger.info('table {}'.format(table))
+        rows = table.find_all('tr')
+        for row in rows[4:]:
+            tds = row.find_all('td')
+            logger.info(tds)
+            for td in tds:
+                logger.info(td)
 
 
 if __name__ == '__main__':
