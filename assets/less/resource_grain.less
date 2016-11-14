@@ -2,8 +2,8 @@
 
 @main_color: #2D2B33;
 
-.resource.juicing {
-  background: #D1D1DD;
+.resource.grain {
+  background: #D2D7D6;
   color: @main_color;
 
   dt {
@@ -19,6 +19,15 @@
     padding: 1em 0;
   }
 
+  table {
+    color: @main_color;
+    width: 100%;
+    td {
+      border: 1px solid #aaa;
+      padding: 0.2em 0.4em;
+    }
+  }
+
   .main {
     display: flex;
     flex-flow: row nowrap;
@@ -26,18 +35,18 @@
     .anime-box();
 
     img {
-      width: 26em;
+      width: 27em;
       //border: 1px solid #AEADBA;
     }
-    div:last-child {
+    div:first-child {
       margin: 0;
       padding: 0 2em;
       h2 {
         font-size: 1.4em;
       }
       & > * {
-        font-size: 0.8em;
-        line-height: 1.2em;
+        font-size: 0.9em;
+        line-height: 1.4em;
       }
     }
   }
@@ -57,24 +66,24 @@
     font-size: 0.9em;
   }
 
-  .benefits {
-    background: rgba(252, 165, 86, 0.3);
+  .ratios {
+    background: rgba(213, 169, 117, 0.5);
     color: @main_color;
   }
 
-  .mixing {
-    background: rgba(64, 5, 18, 0.25);
+  .preparation {
+    background: #E4F0FE;
     color: @main_color;
   }
 
-  .video {
-    background: rgba(255, 252, 207, 0.4);
-    color: @main_color;
+  .method {
+    //background: rgba(255, 252, 207, 0.4);
+    //color: @main_color;
   }
 
-  .tips {
-    background: rgba(219, 230, 252, 0.4);
-    color: @main_color;
+  .meal {
+    //background: rgba(219, 230, 252, 0.4);
+    //color: @main_color;
   }
 
 
@@ -83,24 +92,19 @@
     max-width: 32%;
   }
 
-  .recipe {
-    background: rgba(12, 49, 16, 0.2);
+  .acquire {
+    background: #BBCFF5;
     color: @main_color;
   }
 
-  .fibre {
-    background: #F1FAF7;
-    color: #004B58;
+  .gluten {
+    background: #6C5B48;
+    color: #ECECFA;
   }
 
-  .timing {
+  .suggestions {
     background: rgba(69, 131, 30, 0.1);
     color: @main_color;
-  }
-
-  .machine {
-    background: #786057;
-    color: #F2F2F2;
   }
 
 }
