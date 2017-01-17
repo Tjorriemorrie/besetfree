@@ -29,7 +29,7 @@ class Consulting extends React.Component {
                     img: '/static/img/con_family.jpg',
                     title: 'Family/Couple/Group Consulting',
                     duration: '1 hr',
-                    price: 'R300.00 pp',
+                    price: 'R400.00 pp',
                     description: 'Family, group or couple packages include discounted rates. R300 per person (Health screening, nutritional and lifestyle coaching included-Medicines/supplements or any additional therapies excluded).Please contact me for additional info or terms of service.',
                     expanded: false,
                 },
