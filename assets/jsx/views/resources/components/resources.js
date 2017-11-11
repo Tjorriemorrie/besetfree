@@ -1,6 +1,7 @@
 import React from 'react'
 import Juicing from './juicing'
 import Grain from './grain'
+import Breakfast from './breakfast'
 
 
 class Resources extends React.Component {
@@ -17,11 +18,15 @@ class Resources extends React.Component {
             </div>
 
             <div className="wrapper">
-                <Juicing pathname={this.props.location.pathname} />
+                <Breakfast pathname={this.props.location.pathname} />
             </div>
 
             <div className="wrapper">
                 <Grain pathname={this.props.location.pathname} />
+            </div>
+
+            <div className="wrapper">
+                <Juicing pathname={this.props.location.pathname} />
             </div>
 
         </div>
