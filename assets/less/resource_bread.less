@@ -1,0 +1,76 @@
+@import 'variables';
+
+@bread_color: #e8d6c7;
+@dark_olive_green: #372c21;
+
+.resource.bread {
+  background: @dark_olive_green;
+  color: @bread_color;
+
+  sub {
+    bottom: -0.5em;
+  }
+
+  li {
+    padding-bottom: 0.7em;
+  }
+
+  .content {
+    padding: 1em;
+
+  }
+
+  .story {
+    background: rgba(248, 235, 225, 0.7);
+    color: rgb(59, 50, 54);
+    padding: 1em;
+  }
+
+  .flex-parent {
+    & > div > * {
+      margin: 1em;
+      padding: 0.2em 1em;
+    }
+    & > div > div {
+      .anime-box();
+    }
+  }
+
+  .exp-main {
+    font-size: 0.9em;
+  }
+
+  .intro {
+    background: rgba(248, 234, 233, 0.4);
+    color: @bread_color;
+  }
+
+  .exp-side {
+    font-size: 0.8em;
+    max-width: 32%;
+  }
+
+  .ingredients {
+    background: rgba(92, 86, 79, 0.4);
+    color: @bread_color;
+  }
+
+  .directions {
+    background: rgba(85, 44, 34, 0.4);
+    color: @bread_color;
+  }
+
+  .credits {
+    background: rgba(67, 74, 80, 0.3);
+    color: @bread_color;
+    a {
+      color: burlywood;
+    }
+  }
+
+  .notes {
+    background: rgba(123, 75, 59, 0.4);
+    color: rgb(158, 136, 93);
+  }
+
+}

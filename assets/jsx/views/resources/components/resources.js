@@ -2,6 +2,7 @@ import React from 'react'
 import Juicing from './juicing'
 import Grain from './grain'
 import Breakfast from './breakfast'
+import Bread from './bread'
 
 
 class Resources extends React.Component {
@@ -15,6 +16,10 @@ class Resources extends React.Component {
                     <img src="/static/img/logo_small.png" />
                     <h1>Resources</h1>
                 </div>
+            </div>
+
+            <div className="wrapper">
+                <Bread pathname={this.props.location.pathname} />
             </div>
 
             <div className="wrapper">
