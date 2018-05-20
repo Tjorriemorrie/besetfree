@@ -1,5 +1,5 @@
 from src import app
-from flask.ext.jsontools import jsonapi
+from flask_jsontools import jsonapi
 from flask import render_template, request
 from google.appengine.api import mail
 

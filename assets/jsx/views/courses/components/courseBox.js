@@ -17,8 +17,6 @@ class CourseBox extends React.Component {
             <p>{course.venue}</p>
             <p>{course.cost}</p>
             <p>{course.description}</p>
-            <p>{course.tel}</p>
-            <p>{course.email}</p>
         </div>
     }
 }

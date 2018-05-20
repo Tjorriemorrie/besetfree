@@ -43,9 +43,9 @@ class Contact extends React.Component {
                         <p>Or if you need more information, have questions, or would like to offer a suggestion, please
                             be in touch. You can contact me via phone, email or by filling out the form below.</p>
                         <p>I’ll get back to you as soon as possible.</p>
-                        <p>Tel: 0619142177</p>
+                        <p>Tel: 0421 854 996</p>
                         <p><a href="mailto:info@besetfree.co.za?subject=Enquiry">info@besetfree.co.za</a></p>
-                        <p>Practice at Centurion and Fourways</p>
+                        <p>Practice at The Hills</p>
                         <p>Please inquire about availability</p>
                     </div>
 

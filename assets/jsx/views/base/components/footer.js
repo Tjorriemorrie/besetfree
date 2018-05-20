@@ -12,8 +12,8 @@ const Footer = () => {
 
                 <div>
                     <p>
-                        Tel: 061 914 2177
-                        <br/>Practice at Centurion and Fourways
+                        Tel: 0421 854 996
+                        <br/>Practice at The Hills
                         <br/><a href="mailto:info@besetfree.co.za">info@besetfree.co.za</a>
                     </p>
                     <hr/>
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <p className="copy">
-                <small>&copy; 2016 by Nerine Jansen.</small>
+                <small>&copy; 2018 by Nerine Jansen.</small>
             </p>
         </div>
     </footer>

@@ -108,8 +108,16 @@ class Courses extends React.Component {
                     <img src="/static/img/the_water.jpg" />
                 </div>
 
-                {this.state.data.map((item, i) => {
+                {this.state.data.slice(0, 3).map((item, i) => {
                     return <CourseBox key={'course_' + i} course={item} />;
+                })}
+
+                <div className="courses-insert">
+                    <p>For enquiries please <a href="/contact">contact me</a>.</p>
+                </div>
+
+                {this.state.data.slice(3).map((item, i) => {
+                    return <CourseBox key={'course_' + (i + 3)} course={item} />;
                 })}
 
             </div>
