@@ -1,0 +1,55 @@
+@import 'theme.css';
+
+.service-box {
+    flex: 0 0 18em;
+    margin: 0 0.8em 2em;
+    text-align: center;
+    background: var(--color-lightgray);
+}
+
+.service-box__bg {
+    width: auto;
+    height: 10em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.service-box__text {
+    padding: 1em 1.8em;
+}
+
+.service-box__title {
+    font-family: "droid-serif";
+    font-size: 1.322rem;
+    padding: 0.2em 1em 0.4em;
+    color: black;
+}
+
+.service-box__details {
+    font-family: "open sans";
+    font-size: 0.9rem;
+    color: var(--color-darkgray);
+    padding: 0 0 0.67em;
+}
+
+.service-box__details span {
+    padding: 0 0.2em;
+}
+
+.service-box__description {
+    font-family: "open sans";
+    font-size: 0.8rem;
+    color: var(--color-darkgray);
+    line-height: 1.4em;
+}
+
+.service-box__toggle {
+    font-size: 0.8em;
+    color: var(--color-green);
+}
+
+.service-box__toggle:hover {
+    color: var(--color-lightgreen);
+    cursor: pointer;
+}

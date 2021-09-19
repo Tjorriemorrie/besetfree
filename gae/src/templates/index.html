@@ -3,6 +3,9 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <meta name="p:domain_verify" content="c50a2f10efca90a090a453d7b07856e8"/>
     <title>{% block title %}Be Set Free{% endblock %}</title>
+    {% if not config.DEBUG %}
+        <link href="/static/css/main.a3374e95.css" rel="stylesheet"/>
+    {% endif %}
 </head>
 <body>
     <div id="fb-root"></div>
@@ -28,11 +31,14 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div id="app"></div>
+    <div id="root"></div>
 
     {% block javascripts %}
-        <script src="{{ 'http://localhost:9898' if config.DEBUG }}/static/build/commons.js" type="text/javascript"></script>
-        <script src="{{ 'http://localhost:9898' if config.DEBUG }}/static/build/main.js" type="text/javascript"></script>
+        {% if config.DEBUG %}
+            <script src="http://localhost:3000/static/js/bundle.js" type="text/javascript"></script>
+        {% else %}
+            <script src="/static/js/main.5e1aa309.js" type="text/javascript"></script>
+        {% endif %}
     {% endblock %}
 
 </body>

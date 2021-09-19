@@ -1,7 +1,8 @@
-module: default
 runtime: python27
 api_version: 1
 threadsafe: yes
+
+service: main
 
 libraries:
 - name: ssl

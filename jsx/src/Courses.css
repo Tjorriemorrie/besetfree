@@ -1,0 +1,16 @@
+@import 'theme.css';
+
+
+.c-courses__words {
+  background: var(--color-lightgray);
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.c-courses__insert {
+  flex-basis: 100vw;
+  color: var(--color-darkgray);
+  padding-left: 4em;
+}

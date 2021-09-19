@@ -1,0 +1,53 @@
+@import 'theme.css';
+
+:root {
+    --color-main: #2D2B33;
+}
+
+.c-resources-breakfast {
+  background: #E9C9A2;
+  color: var(--color-main);
+}
+
+
+.intro {
+  background: rgba(115, 139, 54, 0.3);
+  color: var(--color-main);
+}
+
+.carbs {
+  background: rgba(173, 35, 30, 0.25);
+  color: var(--color-main);
+}
+
+.protein {
+  background: rgba(161, 134, 127, 0.6);
+  color: var(--color-main);
+}
+
+
+
+.sequence {
+  background: rgba(94, 79, 71, 0.2);
+  color: var(--color-main);
+}
+
+.fruits {
+  background: rgba(225, 173, 82, 0.3);
+  color: #004B58;
+}
+
+.porridge {
+  background: rgba(154, 160, 136, 0.4);
+  color: var(--color-main);
+}
+
+.grains {
+  background: rgba(129, 110, 59, 0.3);
+  color: var(--color-main);
+}
+
+.lastly {
+  background: rgba(161, 202, 250, 0.4);
+  color: var(--color-main);
+}
