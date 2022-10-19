@@ -56,10 +56,8 @@ docs/_build/
 # PyBuilder
 target/
 
+# pycharm
 .idea/
 
-node_modules/
-
-bower_components/
-
+# mac
 .DS_Store

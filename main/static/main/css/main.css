@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+:root {
+    --clr-nav-yellow: rgb(230, 234, 15);
+    --bg-lightgray: #f0f0f0;
+    --bg-lime: #adc743;
+}
+
+html, body {
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Droid Serif', serif;
+    font-weight: bold;
+    /*font-family: 'Open sans', sans-serif;*/
+    display: block;
+    color: #333;
+    padding-bottom: 0.6em;
+}
+
+p {
+    color: #666;
+}
+
+.white {
+    color: white;
+}
+
+.bg-lightgray {
+    background: var(--bg-lightgray);
+}
+
+
+/******************************************************************
+/* NAV
+/******************************************************************/
+
+.nav {
+  /*background: blue;*/
+  text-align: center;
+  height: 6rem;
+  line-height: 1rem;
+}
+
+.nav .headpiece {
+    width: 19rem;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    color: #555;
+    font-family: 'Oswald';
+    background: var(--clr-nav-yellow);
+}
+
+.nav .headpiece p {
+    font-family: 'Droid Serif';
+    font-size: 1rem;
+    margin: 0;
+    padding-bottom: 0.7rem;
+    color: #222;
+}
+
+/**************************************************************
+/* FOOTER
+/**************************************************************/
+
+.footer {
+    background: url(../img/wood.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 10rem 5rem 4rem;
+    text-align: center;
+}
+
+.footer p, .footer h4 {
+    color: white;
+}
+
+/**************************************************************
+/* HOME
+/**************************************************************/
+
+.main-holder {
+    background: url(../img/home/greens_on_table_opt.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-holder .row {
+    background: white;
+}
+
+.main-holder .row.clear-bg {
+    background: none;
+}
+
+.main-holder .quote {
+    background: white;
+    opacity: 0.7
+}
+
+.main-holder .quote h1 {
+    #font-size: 2.3em;
+    padding: 4em 1.4em 2em;
+}
+
+.main-holder .portrait {
+    padding: 1em 0;
+    margin-right: -0.6em;
+    z-index: 10;
+}
+
+.main-holder .portrait-txt {
+    padding: 2em 3em;
+}
+
+.main-holder .logo {
+    background: url(../img/wood.jpg);
+    margin: 2em -2em 2em 2em;
+    z-index: 10;
+}
+
+.main-holder .logo img {
+    padding: 1em;
+}
+
+.main-holder .co-txt {
+    background: var(--bg-lime);
+    padding: 4em 2em 2em 6em;
+}
+
+.main-holder .co-txt .white {
+    color: white;
+}
+
+.main-holder .sign {
+    background: var(--bg-lime);
+}
+
+.main-holder .services-txt-box {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.main-holder .services-title {
+    padding-right: 0;
+    margin-right: 0;
+}
+

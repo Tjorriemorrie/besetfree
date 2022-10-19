@@ -1,0 +1,57 @@
+@import 'theme.css';
+
+:root {
+  --color-main: #2D2B33;
+}
+
+.c-resources-grain {
+  background: #D2D7D6;
+  color: var(--color-main);
+}
+
+table {
+  color: var(--color-main);
+  width: 100%;
+}
+
+table td {
+  border: 1px solid #aaa;
+  padding: 0.2em 0.4em;
+}
+
+
+.ratios {
+  background: rgba(213, 169, 117, 0.5);
+  color: var(--color-main);
+}
+
+.preparation {
+  background: #E4F0FE;
+  color: var(--color-main);
+}
+
+/*.method {*/
+  /*background: rgba(255, 252, 207, 0.4);*/
+  /*color: var(--color-main);*/
+/*}*/
+
+/*.meal {*/
+  /*background: rgba(219, 230, 252, 0.4);*/
+  /*color: var(--color-main);*/
+/*}*/
+
+
+.acquire {
+  background: #BBCFF5;
+  color: var(--color-main);
+}
+
+.gluten {
+  background: #6C5B48;
+  color: #ECECFA;
+}
+
+.suggestions {
+  background: rgba(69, 131, 30, 0.1);
+  color: var(--color-main);
+}

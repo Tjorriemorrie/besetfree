@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="main-holder">
+
+
+    <div class="row clear-bg">
+        <div class="quote col-md-4 offset-md-6">
+            <h1>"Let food be thy medicine <br/>and medicine be thy food"</h1>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-4 portrait">
+            <img class="img-fluid" src="{% static 'main/img/home/nerine_opt.jpg' %}" />
+        </div>
+        <div class="col-5 portrait-txt bg-lightgray">
+            <h4>Meet Nerine</h4>
+            <p>My Name is Nerine Jansen, and I am a Natural Healing Practitioner and Nutritional
+                medicine specialist with a special focus on nutrition, lifestyle, natural medicine
+                and holistic therapies. As a mom myself I understand the importance of family
+                health and wellness through healthy balanced meals and nutrition. Be assured that
+                I am as passionate about your health as that of my own family! Join me on your
+                personal journey to find the life you were meant to live. a Life free from stress,
+                or health concerns.</p>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-2 logo">
+            <img class="img-fluid" src="{% static 'main/img/logo.png' %}" />
+        </div>
+        <div class="col-5 co-txt">
+            <h4 class="white">Be Set Free Health Solutions</h4>
+            <h6 class="white">Holistic Healthcare</h6>
+            <h6 class="white">Wellness Consulting/consultation</h6>
+            <h6 class="white">Health Education and Training</h6>
+        </div>
+    </div>
+
+
+    <div class="row pt-4">
+        <div class="col-5 offset-1">
+            <img class="img-fluid" src="{% static 'main/img/home/plant_crush.jpg' %}" />
+        </div>
+    </div>
+    <div class="row pt-4">
+        <div class="col-5 offset-1 services-title">
+            <div class="row">
+                <div class="col-5 offset-7">
+                    <h3 class="sign white text-end p-4">Services</h3>
+                </div>
+            </div>
+            <img class="img-fluid pb-2" src="{% static 'main/img/home/apple_smoothie.jpg' %}" />
+        </div>
+        <div class="col-6 services-txt-box">
+            <div class="bg-lightgray services-txt p-5">
+                <h5>Individual, Online, Family, Couple and Group Counseling
+                <h5>Weight and/or Stress Management</h5>
+                <h5>Health Education</h5>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

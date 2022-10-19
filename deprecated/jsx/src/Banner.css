@@ -1,0 +1,27 @@
+.o-banner {
+    background: url('/static/img/wood.jpg') no-repeat fixed center center;
+    background-size: cover;
+    text-align: center;
+    font-style: italic;
+}
+
+.o-banner__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.o-banner__img {
+    width: 4em;
+    height: auto;
+    flex-basis: 8em;
+    padding: 0 1em;
+}
+
+.o-banner__heading {
+    color: var(--color-white);
+    padding: 0 1em;
+    font-family: "georgia", "palatino";
+    font-size: 3em;
+}

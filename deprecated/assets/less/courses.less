@@ -1,0 +1,39 @@
+@import 'variables';
+
+
+.courses {
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .words {
+    background: @lightgray;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    padding: 1em;
+  }
+
+  .course_box {
+    flex: 0 1 16em;
+    margin: 1em 0.4em;
+    padding: 0.6em;
+  }
+
+  .course_box:nth-child(3n+0) {
+    background: @lightgreen;
+  }
+  .course_box:nth-child(3n+1) {
+    background: @verylightgray;
+  }
+  .course_box:nth-child(3n+2) {
+    background: @lightbrown;
+  }
+
+  .courses-insert {
+    flex-basis: 100vw;
+    color: @darkgray;
+    padding-left: 4em;
+  }
+}

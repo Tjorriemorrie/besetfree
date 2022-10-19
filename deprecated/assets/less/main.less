@@ -1,0 +1,162 @@
+@import 'base';
+@import 'nav';
+@import 'footer';
+@import 'home';
+@import 'about';
+@import 'services';
+@import 'therapies';
+@import 'courses';
+@import 'resources';
+@import 'contact';
+
+.flex-parent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  & > div {
+    flex: 1 1 auto;
+  }
+}
+
+.page {
+  & > div {
+    margin: 1em;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 0.25em;
+  }
+}
+
+.btn-submit {
+  padding: 1em;
+  font-size: 0.9em;
+  border-radius: 0.25em;
+  border: 0;
+  line-height: 0;
+}
+
+.page-contact {
+  background: url('/static/img/bg_contact.jpg') no-repeat fixed 100% center;
+}
+
+.flex-parent .contact-form {
+  flex: 0.5 0 14em;
+  margin-left: 1em;
+  padding-left: 2em;
+  border-left: 1px solid #aaa;
+}
+
+.banner {
+  background: url('/static/img/wood.jpg') no-repeat fixed center center;
+  background-size: cover;
+  text-align: center;
+  font-style: italic;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    img {
+      width: 4em;
+      height: auto;
+      flex-basis: 8em;
+      padding: 0 1em;
+    }
+    h1 {
+      color: @white;
+      padding: 0 1em;
+      font-family: "georgia", "palatino";
+      font-size: 3em;
+    }
+  }
+}
+
+.collapse {
+  padding: 1em;
+}
+
+.signup {
+  position: fixed;
+  right: 0.8em;
+  bottom: 0;
+  width: 24em;
+  padding: 1em 2em;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.4em;
+  background-color: @lightbrown;
+  p {
+    margin: 1em 0;
+  }
+  button {
+    margin: 0.8em 0 0;
+  }
+}
+
+.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+/** animations **/
+.keyframes(fade-in; {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+});
+
+.keyframes(slide-h; {
+  0% {
+    opacity: 0;
+    transform: translateX(-1em);
+  }
+  60% {
+    opacity: 0.1;
+    transform: translateX(-0.4em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+});
+
+.keyframes(slide-p; {
+  0% {
+    opacity: 0;
+    transform: translateX(1em);
+  }
+  35% {
+    opacity: 0.6;
+    transform: translateX(0.6em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+});
+
+.keyframes(slide-d; {
+  from {
+    transform: translateY(2em);
+  }
+  to {
+    transform: translateY(0);
+  }
+});
+
+/** box animations **/
+.anime-box() {
+  img, blockquote {
+    .animation(fade-in 2s 1 ease-in);
+  }
+  h1, h2, h3, h4, h5, h6, dt {
+    .animation(slide-h 1s 1 ease-in);
+  }
+  p, li, dl {
+    .animation(slide-p 0.8s 1 ease-in);
+  }
+}
+

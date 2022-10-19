@@ -1,0 +1,52 @@
+@import 'theme.css';
+
+
+.c-contact__left {
+
+}
+
+.details {
+  background: var(--color-verylightgray);
+  padding: 2em;
+}
+
+.expect {
+  background: var(--color-lightbrown);
+  padding: 1em;
+}
+
+.c-contact__right {
+  flex: 0 1 25em;
+}
+
+img {
+  width: 27em;
+}
+
+.contact_form {
+  background: var(--color-lightgreen);
+  text-align: right;
+  padding: 1em 2em 1em 3em;
+  margin-left: 20%;
+}
+
+form {
+  font-size: 0.8em;
+}
+
+input, textarea {
+  width: 80%;
+  text-align: right;
+}
+
+textarea {
+  height: 5em;
+}
+
+button {
+  margin: 1em 0 0;
+}
+
+form dt {
+  margin: 0.6em 0 0;
+}

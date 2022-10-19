@@ -1,0 +1,107 @@
+@import 'variables';
+
+@main_color: #2D2B33;
+
+.resource.breakfast {
+  background: #E9C9A2;
+  color: @main_color;
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    font-size: 0.9em;
+    padding: 0.2em 0 0.8em;
+  }
+
+  img {
+    padding: 1em 0;
+  }
+
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1em;
+    .anime-box();
+
+    img {
+      width: 26em;
+      //border: 1px solid #AEADBA;
+    }
+    div:last-child {
+      margin: 0;
+      padding: 0 2em;
+      h2 {
+        font-size: 1.4em;
+      }
+      & > * {
+        font-size: 0.9em;
+        line-height: 1.4em;
+      }
+    }
+  }
+
+  .flex-parent {
+    & > div > * {
+      margin: 1em;
+      padding: 0.2em 1em;
+    }
+    & > div > div {
+      .anime-box();
+    }
+  }
+
+
+  .exp-main {
+    font-size: 0.9em;
+  }
+
+  .intro {
+    background: rgba(115, 139, 54, 0.3);
+    color: @main_color;
+  }
+
+  .carbs {
+    background: rgba(173, 35, 30, 0.25);
+    color: @main_color;
+  }
+
+  .protein {
+    background: rgba(161, 134, 127, 0.6);
+    color: @main_color;
+  }
+
+
+
+  .exp-side {
+    font-size: 0.8em;
+    max-width: 32%;
+  }
+
+  .sequence {
+    background: rgba(94, 79, 71, 0.2);
+    color: @main_color;
+  }
+
+  .fruits {
+    background: rgba(225, 173, 82, 0.3);
+    color: #004B58;
+  }
+
+  .porridge {
+    background: rgba(154, 160, 136, 0.4);
+    color: @main_color;
+  }
+
+  .grains {
+    background: rgba(129, 110, 59, 0.3);
+    color: @main_color;
+  }
+
+  .lastly {
+    background: rgba(161, 202, 250, 0.4);
+    color: @main_color;
+  }
+}
+

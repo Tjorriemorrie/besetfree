@@ -1,0 +1,23 @@
+{
+  "name": "besetfree",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "tjorriemorrie <jacoj82@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Tjorriemorrie/besetfree",
+  "moduleType": [
+    "es6"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

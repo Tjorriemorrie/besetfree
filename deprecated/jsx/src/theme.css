@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+
+:root {
+    --color-brown: rgb(117, 84, 49);
+    --color-darkgray: rgba(86, 85, 85, 1);
+    --color-white: white;
+    --color-verylightgray: rgb(240, 240, 240);
+    --color-lightgreen: rgb(173, 199, 67);
+    --color-lightgray: rgba(190, 190, 190, 1);
+    --color-yellow: #E7EB10;
+    --color-green: rgb(137, 156, 64);
+    --color-lightbrown: rgb(172, 162, 152);
+}
+
+html, body {
+    font-family: 'Droid Serif';
+    /*//, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.6em;
+    margin: 0;
+    color: var(--color-darkgray);
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+dd {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+blockquote {
+    border-left: 0.8em solid rgba(0, 0, 0, 0.2);
+    margin-left: 0.4em;
+    padding-left: 0.8em;
+}
+
+cite {
+    font-size: 0.8em;
+}
+
+button {
+    padding: 0.4em 3em;
+    border-radius: 0.25em;
+    color: #555;
+    background: floralwhite;
+}
+
+hr {
+    margin: 1em 4em;
+}
+
+.o-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 60em;
+    margin: 0 auto;
+    padding: 0;
+    /*justify-content: space-around;*/
+}
+
+.o-banner {
+    background: url('/static/img/wood.jpg') no-repeat fixed center center;
+    background-size: cover;
+    text-align: center;
+    font-style: italic;
+}
+
+.o-banner__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.o-banner__img {
+    width: 4em;
+    height: auto;
+    flex-basis: 8em;
+    padding: 0 1em;
+}
+
+.o-banner__heading {
+    color: var(--color-white);
+    padding: 0 1em;
+    font-family: "georgia", "palatino";
+    font-size: 3em;
+}
