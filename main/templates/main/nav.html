@@ -1,11 +1,22 @@
 {% load static %}
 
-<div class="nav d-flex justify-content-evenly">
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="nav d-flex justify-content-evenly align-items-center">
 
-    <div class="headpiece">
-        <p>Nerine Jansen</p>
-        Natural Healthcare Practitioner
-        <br/><sub>PRO 08329 T</sub>
+            <div class="headpiece">
+                <p>Nerine Jansen</p>
+                Natural Healthcare Practitioner
+                <br/><sub>PRO 08329 T</sub>
+            </div>
+
+            <div class="link">
+                <a href="{% url 'home' %}" class="{% if nav == 'home' %}selected{% endif %}">Home</a>
+            </div>
+            <div class="link">
+                <a href="{% url 'about' %}" class="{% if nav == 'about' %}selected{% endif %}">About</a>
+            </div>
+
+        </div>
     </div>
-
 </div>

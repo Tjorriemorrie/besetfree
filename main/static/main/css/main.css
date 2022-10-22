@@ -4,14 +4,16 @@
 
 :root {
     --clr-nav-yellow: rgb(230, 234, 15);
-    --bg-lightgray: #f0f0f0;
-    --bg-lime: #adc743;
+    --clr-lightgray: #f0f0f0;
+    --clr-lime: #adc743;
+    --clr-brown: #aca298;
 }
 
 html, body {
     font-family: sans-serif;
     font-size: 17px;
     line-height: 1.4rem;
+    color: #666;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,12 +21,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     /*font-family: 'Open sans', sans-serif;*/
     display: block;
-    color: #333;
     padding-bottom: 0.6em;
-}
-
-p {
-    color: #666;
+    color: #333;
 }
 
 .white {
@@ -32,7 +30,16 @@ p {
 }
 
 .bg-lightgray {
-    background: var(--bg-lightgray);
+    background: var(--clr-lightgray);
+}
+
+.bg-lime {
+    background: var(--clr-lime);
+}
+
+.bg-brown {
+    background: var(--clr-brown);
+    color: white;
 }
 
 
@@ -64,6 +71,21 @@ p {
     color: #222;
 }
 
+.nav .link a {
+    text-decoration: none;
+    color: #777;
+    font-weight: normal;
+}
+
+.nav .link a:hover {
+    color: #444;
+    text-shadow: #eee 1px 1px;
+}
+
+.nav .link a.selected {
+    color: #000;
+}
+
 /**************************************************************
 /* FOOTER
 /**************************************************************/
@@ -77,6 +99,32 @@ p {
 
 .footer p, .footer h4 {
     color: white;
+}
+
+
+/**************************************************************
+/* All pages
+/**************************************************************/
+
+.heading {
+    background: url(../img/wood.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 2rem;
+}
+
+.heading h1 {
+    color: white;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bold;
+    font-family: georgia, palatino;
+    padding: 0;
+    margin: 0;
+}
+
+.heading .img-fluid {
+    width: 12rem;
+    padding-right: 4rem;
 }
 
 /**************************************************************
@@ -127,7 +175,6 @@ p {
 }
 
 .main-holder .co-txt {
-    background: var(--bg-lime);
     padding: 4em 2em 2em 6em;
 }
 
@@ -149,3 +196,27 @@ p {
     margin-right: 0;
 }
 
+
+/**************************************************************
+/* ABOUT
+/**************************************************************/
+
+.about-holder .head {
+    padding: 0;
+}
+
+.about-holder .specialities {
+    padding: 3rem;
+}
+
+.about-holder .story {
+    padding: 0;
+}
+
+.about-holder .story div {
+    padding: 3rem;
+}
+
+.about-holder .story img {
+    width: 50%;
+}
